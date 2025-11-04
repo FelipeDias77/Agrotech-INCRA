@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INCRA - Login</title>
+    <link rel="stylesheet" href="entrinha.css">
+</head>
+<body>
+    <div class="container">
+        <div class="left">
+            <div class="logo">
+                <img src="img/incra-logo.png" alt="INCRA">
+            </div>
+        </div>
+        <div class="right">
+            <form class="login-form" id="loginForm">
+                
+                <label for="cpf">N° CPF:</label>
+                <input type="text" id="cpf" name="cpf" placeholder="Digite seu CPF" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" required />
+                
+                <label for="email">Senha</label>
+                <input id="senha" type="password" name="senha" placeholder="Digite sua senha" required />
+                
+                <div class="containex">
+                    <!-- Botão com link para outro site -->
+                    <a href="index.html" class="btn-link">
+                        ENTRAR
+                    </a>
+                <div class="containex">
+                <!-- Botão com link para outro site -->
+                <a href="https://acesso.gov.br/" class="btn-link">
+                     GOV.BR
+                </a>
+                <a href="verificacao.html" class="link" id="forgotPassword">Esqueceu a senha?</a>
+            </form>
+        </div>
+    </div>
+    <script src="javinha.js"></script>
+</body>
+</html>
