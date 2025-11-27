@@ -1,6 +1,6 @@
-# 🌱 AgroTec — Plataforma para Apoio a Pequenas Empresas Rurais
+# 🌱 AgroTech — Plataforma para Apoio a Pequenas Empresas Rurais
 
-Bem-vindo ao repositório do **Projeto AgroTec**, um sistema web desenvolvido com foco em ajudar **pequenas empresas e agricultores familiares** a organizarem e apresentarem seus produtos de forma simples, eficiente e acessível.
+Bem-vindo ao repositório do **Projeto AgroTech**, um sistema web desenvolvido com foco em ajudar **pequenas empresas e agricultores familiares** a organizarem e apresentarem seus produtos de forma simples, eficiente e acessível.
 
 Este projeto é parte do curso **TSI — Tecnologia em Sistemas para Internet** do **Instituto Federal de Brasília (IFB)**.
 
@@ -32,7 +32,7 @@ O AgroTec foi desenvolvido usando:
 A organização do projeto segue um padrão profissional para facilitar manutenção, escala e entendimento de novos colaboradores.
 
 ```
-PROJETO-AGROTEC/
+PROJETO-AGROTECH/
 │
 └── src/
     │
@@ -85,7 +85,7 @@ PROJETO-AGROTEC/
 
 ---
 
-# 🔧 Integração PHP — AgroTec (carrot)
+# 🔧 Integração PHP — AgroTech (carrot)
 
 Resumo dos arquivos responsáveis pela integração dinâmica com MySQL:
 
@@ -105,10 +105,10 @@ Baixe e instale: [https://www.apachefriends.org/](https://www.apachefriends.org/
 
 ## 2. Colocar o projeto no htdocs
 
-Coloque a pasta **PROJETO-AGROTEC** dentro de:
+Coloque a pasta **PROJETO-AGROTECH** dentro de:
 
 ```
-C:/xampp/htdocs/agrotec
+C:/xampp/htdocs/agrotech
 ```
 
 ## 3. Iniciar servidores
