@@ -1,6 +1,6 @@
-# 🌱 AgroTec — Platform to Support Small Rural Businesses
+# 🌱 AgroTech — Platform to Support Small Rural Businesses
 
-Welcome to the **AgroTec Project** repository — a web system designed to help **small businesses and family farmers** present and manage their products easily, efficiently, and professionally.
+Welcome to the **AgroTech Project** repository — a web system designed to help **small businesses and family farmers** present and manage their products easily, efficiently, and professionally.
 
 This project is part of the **TSI — Internet Systems Technology** course at the **Federal Institute of Brasília (IFB)**.
 
@@ -17,7 +17,7 @@ This project is part of the **TSI — Internet Systems Technology** course at th
 
 ## 🚀 Technologies Used
 
-AgroTec is being developed using:
+AgroTech is being developed using:
 
 * **HTML** — Page structure
 * **CSS** — Layout and styling
@@ -32,7 +32,7 @@ AgroTec is being developed using:
 The project follows a clean and professional structure to ensure organization, easy maintenance, and scalability.
 
 ```
-PROJETO-AGROTEC/
+PROJETO-AGROTECH/
 │
 └── src/
     │
@@ -85,7 +85,7 @@ PROJETO-AGROTEC/
 
 ---
 
-# 🔧 PHP Integration — AgroTec (carrot)
+# 🔧 PHP Integration — AgroTech (carrot)
 
 Below are the key files involved in the PHP/MySQL integration:
 
@@ -105,10 +105,10 @@ Download from: [https://www.apachefriends.org/](https://www.apachefriends.org/)
 
 ## 2. Place the project inside htdocs
 
-Move the **PROJETO-AGROTEC** folder to:
+Move the **PROJETO-AGROTECH** folder to:
 
 ```
-C:/xampp/htdocs/agrotec
+C:/xampp/htdocs/agrotech
 ```
 
 ## 3. Start the services
@@ -129,7 +129,7 @@ In phpMyAdmin:
 ## 5. Open in the browser
 
 ```
-http://localhost/agrotec/index.php
+http://localhost/agrotech/index.php
 ```
 
 ---
@@ -207,4 +207,5 @@ This project is intended for educational use and academic development.
 ---
 
 Made with ❤️ by the AgroTec team.
+
 
