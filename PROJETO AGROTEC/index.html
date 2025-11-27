@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgroTech</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <header class="header">
+        <a href="https://www.gov.br/incra/pt-br" class="icon-btn">
+            <img src="logo/incra.png" alt="Incra">
+            <span class="icon-text" id="typed-text"></span>
+        </a>
+        <div class="search-bar">
+            <input type="text" placeholder="Pesquisar na AgroTech...">
+            <button>Pesquisar</button>
+        </div>
+
+        <div class="user">
+            <div class="perfil">
+                <button id="perfil-btn">
+                    <img src="perfil/perfil.png" alt="Perfil">
+                </button>
+            </div>
+            <div id="options" class="hidden">
+                <a href="login.html">
+                    <button class="action-btn">Criar Conta</button>
+                </a>
+                <a href="entrar.html">
+                    <button class="action-btn">Entrar na Conta</button>
+                </a>
+            </div>
+            <div class="menu">
+                <a href="#">Cesta</a>
+                <a href="#">Minha Conta</a>
+                <a href="#">Ajuda</a>
+                <a href="#">Sobre</a>
+            </div>
+        
+            <!-- Botão com imagem para ativar/desativar a barra lateral -->
+            <img id="toggleButton" src="icons/next.png" alt="Abrir/Fechar Barra" />
+        
+        </div>
+    </header>
+
+    <main> 
+        <section class="carousel" aria-label="Gallery">
+            <ol class="carousel__viewport">
+                <li id="carousel__slide1" class="carousel__slide">
+                    <div class="carousel__snapper">
+                        <img src="img/coisa.jpeg" alt="Banner">
+                    </div>
+                </li>
+                <li id="carousel__slide2" class="carousel__slide">
+                    <div class="carousel__snapper">
+                        <img src="img/coisa2.jpg" alt="Descrição da imagem 2">
+                    </div>
+                </li>
+                <li id="carousel__slide3" class="carousel__slide">
+                    <div class="carousel__snapper">
+                        <img src="img/coisa3.jpg" alt="Descrição da imagem 3">
+                    </div>
+                </li>
+            </ol>
+          </section>
+</section>
+        
+        <div class="list-card">
+            <div class="card-container">
+                <img src="icons/encomenda.png" alt="Retire sua Encomenda">
+                <h3>Resgate a Encomenda</h3>
+                <button>Mostrar</button>
+            </div>
+            <div class="card-container">
+                <img src="icons/local.png" alt="Ponto de Retirada">
+                <h3>Ponto de Retirada</h3>
+                <button>Mostrar</button>
+            </div>
+            <div class="card-container">
+                <img src="icons/mais-vendidos.png" alt="Produtos Mais Vendidos">
+                <h3>Mais Vendidos</h3>
+                <button>Mostrar</button>
+            </div>
+            <div class="card-container">
+                <img src="icons/pagamento.png" alt="Meios de Pagamento">
+                <h3>Meios de Pagamento</h3>
+                <button>Mostrar</button>
+            </div>
+        </div>
+    
+        <section class="products">
+            <h2>Mais indicados para você</h2>
+            <div class="product-list">
+                <div class="product-card">
+                    <img src="img/cenoura.png" alt="Cenoura">
+                    <h3>Cenoura</h3>
+                    <p>R$ 29,90</p>
+                    <button type="button"><a href="carrot.html" class="buttin" alt="Cenoura">
+                        Comprar
+                    </a></button>
+                    
+                </div>
+                <div class="product-card">
+                    <img src="img/pimenta.png" alt="Pimenta">
+                    <h3>Pimenta</h3>
+                    <p>R$ 39,90</p>
+                    <button type="button"><a href="carrot.html" class="buttin" alt="Cenoura">
+                        Comprar
+                    </a></button>
+                </div>
+                <div class="product-card">
+                    <img src="img/alface.png" alt="Alface">
+                    <h3>Alface</h3>
+                    <p>R$ 29,90</p>
+                    <button>Comprar</button>
+                </div>
+                <div class="product-card">
+                    <img src="img/tomate.jpeg" alt="Tomate">
+                    <h3>Tomate</h3>
+                    <p>R$ 29,90</p>
+                    <button>Comprar</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>Desenvolvido por Felipe Dias, Pedro Neto, Endryo Matos e Felipe Madson © 2025 AgroTech</p>
+    </footer>
+    <script src="javinha.js"></script>
+</body>
+</html>

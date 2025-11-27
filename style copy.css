@@ -1,0 +1,331 @@
+Css
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+    color: #333;
+    overflow-x: hidden;
+    /* Impede a rolagem horizontal */
+    margin: 0;
+    /* Remove margens padrão */
+    padding: 0;
+}
+
+.header {
+    position: fixed;
+    /* Fixa o header no topo */
+    top: 0;
+    left: 0;
+    width: 100%;
+    /* Para ocupar a largura total */
+    z-index: 10;
+    /* Garante que o header fique acima de outros elementos */
+    background-color: #5a8f45;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 350px;
+}
+
+/* Fixar a barra de ícones abaixo do header (opcional) */
+.icon-bar {
+  position: fixed;
+  /* Fixa a barra de ícones */
+  top: 70px;
+  /* Ajuste conforme a altura do header */
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  /* Um pouco abaixo do header */
+  background-color: #f8f8f8;
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.header img {
+  width: 80px;
+  height: 80px;
+  align-items: center;
+  display: flex;
+  object-fit: cover;
+  margin: 0px;
+}
+
+.header .logo h1 {
+  font-size: 1.5em;
+  border: none;
+  margin: 0 20px;
+}
+
+.header .search-bar {
+  flex-grow: 1;
+  margin: 0 15px;
+  display: flex;
+}
+
+.header .search-bar input {
+  flex-grow: 1;
+  padding: 13px;
+  border-radius: 4px 0 0 4px;
+  border: 1px solid #ddd;
+}
+
+.header .search-bar button {
+  padding: 5px 10px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+  background-color: #9DCC44;
+}
+
+/* ENTRAR NO LOGIN */
+.user {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.perfil button {
+  background-color: #5a8f45;
+  border: none;
+  cursor: pointer;
+  border-radius: 100%;
+  padding: 5px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  z-index: 20;
+}
+
+.perfil button:hover {
+  transform: scale(1.1);
+}
+
+.perfil img {
+  width: 70px;
+  height: 70px;
+  display: block;
+  background-color: #fff;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #5a8f45;
+}
+
+#options {
+  position: absolute;
+  top: 100px;
+  /* Ajustar a posição desse botãozin */
+  left: 50%;
+  /* Centraliza o botãozin */
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+#options button {
+  background-color: #5a8f45;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 1.0em;
+}
+
+#options button:hover {
+  background-color: #6ebb57;
+  transform: scale(1.05);
+}
+
+#options.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* FIM DO LOGIN */
+
+.logo-img {
+  height: 65px;
+}
+
+.top-bar {
+  background-color: #7aad43;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+}
+
+.top-bar .logo {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.top-bar input[type="text"] {
+  width: 60%;
+  padding: 6px;
+  border: none;
+  border-radius: 4px;
+}
+
+.top-bar .entrar {
+  background-color: white;
+  color: #7aad43;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.top-bar .icone-user {
+  font-size: 20px;
+  margin-left: 10px;
+}
+
+.main-box {
+  background-color: white;
+  width: 80%;
+  max-width: 500px;
+  margin: 40px auto;
+  padding: 30px;
+  border-radius: 6px;
+  box-shadow: 0 0 5px #ccc;
+  text-align: center;
+}
+
+.main-box h2 {
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.email {
+  font-weight: bold;
+}
+
+.link-trocar {
+  display: block;
+  margin-bottom: 20px;
+  color: #0066cc;
+  text-decoration: none;
+}
+
+.verificacao-metodos {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 20px 0;
+  gap: 10px;
+}
+
+.input-codigo {
+  width: 80%;
+  padding: 10px;
+  margin: 15px 0;
+  font-size: 16px;
+}
+
+.confirmar {
+  background-color: #bddc44;
+  border: none;
+  padding: 12px 30px;
+  color: #333;
+  font-weight: bold;
+  cursor: pointer;
+  margin: 10px;
+}
+
+.voltar {
+  background-color: #ccc;
+  border: none;
+  padding: 12px 30px;
+  cursor: pointer;
+  margin: 10px;
+}
+
+/* Rodapé */
+.footer {
+  background-color: #5a8f45;
+  color: white;
+  text-align: center;
+  padding: 30px;
+  margin-top: 35px;
+}
+
+#iconBar {
+  display: none;
+  /* Menu começa oculto */
+}
+
+#iconBar.show {
+  display: block;
+  /* Menu fica visível quando a classe 'show' é adicionada */
+  margin-top: 4px;
+  padding: 10px;
+  background-color: 0;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  display: flex;
+  gap: 20px;
+  /* Espaço entre os botões */
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  box-shadow: 0 4px 8px #CCC;
+}
+
+/* Estilo para o link */
+a {
+  text-decoration: none;
+  /* Remove o underline do link */
+  border: none;
+  /* Remove qualquer borda ao redor do link */
+}
+
+/* Estilo para o ícone (garantir que imagem e texto fiquem na mesma linha) */
+.icon-btn {
+  display: flex;
+  /* Usa flexbox para alinhar imagem e texto */
+  align-items: center;
+  /* Alinha a imagem e o texto verticalmente no centro */
+  cursor: pointer;
+  /* Define o cursor como ponteiro para indicar que é clicável */
+}
+
+/* Estilo da imagem dentro do botão de ícone */
+.icon-btn img {
+  margin-right: 10px;
+  /* Espaço entre a imagem e o texto */
+}
+
+/* Estilo do texto dentro do botão de ícone */
+.icon-btn .icon-text {
+  font-size: 18px;
+  color: white;
+  padding: 5px;
+  opacity: 0;
+  /* Começa invisível */
+  transition: opacity 0.5s ease-in-out;
+  /* Transição suave de opacidade */
+}
+
+/* Quando passar o mouse sobre o ícone, o texto aparece com fade-in */
+.icon-btn:hover .icon-text {
+  opacity: 1;
+  /* Torna o texto visível */
+}

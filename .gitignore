@@ -1,0 +1,16 @@
+# Sistema operacional
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Pastas sensíveis
+/vendor/
+node_modules/
+.env
+.env.local
+
+# IDEs
+.vscode/
+.idea/

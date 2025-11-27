@@ -1,0 +1,175 @@
+/* Resetando o estilo padrão */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.back-button {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #4CAF50; /* Cor do fundo */
+    color: white; /* Cor do texto */
+    border: none; /* Remove a borda */
+    padding: 10px 20px; /* Espaçamento interno */
+    font-size: 16px; /* Tamanho da fonte */
+    border-radius: 8px; /* Borda arredondada */
+    cursor: pointer; /* Mostra que é clicável */
+    width: 100px; /* Largura do botão */
+    text-align: center; /* Centraliza o texto */
+    transition: background-color 0.3s ease; /* Efeito ao passar o mouse */
+}
+
+.back-button:hover {
+    background-color: #45a049; /* Cor ao passar o mouse */
+}
+
+
+
+/* Corpo da página */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color:  #f8f8f8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Container do formulário */
+.container {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 550px;
+}
+
+.containex {
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    width: 100%;
+    text-align: center;
+}
+
+/* Estilo para o botão de link */
+.btn-link {
+    width: 600px;
+    padding: 10px 45px;
+    background-color: #5a8f45;
+    border-radius: 5px;
+    color: white;
+    font-size: 23px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-decoration: none; /* Remove a linha do texto */
+}
+
+.btn-link:hover {
+    background-color: #9DCC44;
+    box-shadow: 0 8px 16px #CCC;
+    transform: scale(1.05);
+}
+
+/* Estilo do título */
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 28px;
+    color: black;
+}
+
+/* Estilo dos campos de entrada */
+.campo {
+    margin-bottom: 20px;
+}
+
+.campo label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 8px;
+    color: black;
+    font-weight: bold;
+}
+
+.campo input, .campo select {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid black;
+    border-radius: 5px;
+    
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+/* Efeito ao passar o mouse sobre os campos */
+.campo input:focus, .campo select:focus {
+    border-color: black;
+    
+    outline: none;
+}
+
+/* Estilo do botão */
+button {
+    width: 50%;
+    padding: 5px;
+    background-color: #5a8f45;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 23px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin: 0 auto; /* Centraliza horizontalmente */
+    display: block; /* Faz com que o botão se comporte como bloco para a centralização */
+}
+
+button:hover {
+    background-color: #9DCC44;
+    box-shadow: 0 8px 16px #CCC;
+}
+
+/* Estilo para as opções de usuário (radio buttons) */
+.opcoes {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.opcoes label {
+    font-size: 14px;
+    color: black;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    .campo input, .campo select {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    button {
+        padding: 12px;
+        font-size: 16px;
+    }
+}
+
+h3 {
+    text-align: center;
+    margin-bottom: 0px;
+    color: black;
+}

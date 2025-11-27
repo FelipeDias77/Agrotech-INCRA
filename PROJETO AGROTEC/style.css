@@ -1,0 +1,114 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+}
+
+.logo-img {
+  height: 65px;
+}
+
+.top-bar {
+  background-color: #7aad43;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+}
+
+.top-bar .logo {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.top-bar input[type="text"] {
+  width: 60%;
+  padding: 6px;
+  border: none;
+  border-radius: 4px;
+}
+
+.top-bar .entrar {
+  background-color: white;
+  color: #7aad43;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.top-bar .icone-user {
+  font-size: 20px;
+  margin-left: 10px;
+}
+
+.main-box {
+  background-color: white;
+  width: 80%;
+  max-width: 500px;
+  margin: 40px auto;
+  padding: 30px;
+  border-radius: 6px;
+  box-shadow: 0 0 5px #ccc;
+  text-align: center;
+}
+
+.main-box h2 {
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.email {
+  font-weight: bold;
+}
+
+.link-trocar {
+  display: block;
+  margin-bottom: 20px;
+  color: #0066cc;
+  text-decoration: none;
+}
+
+.verificacao-metodos {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 20px 0;
+  gap: 10px;
+}
+
+.input-codigo {
+  width: 80%;
+  padding: 10px;
+  margin: 15px 0;
+  font-size: 16px;
+}
+
+.confirmar {
+  background-color: #bddc44;
+  border: none;
+  padding: 12px 30px;
+  color: #333;
+  font-weight: bold;
+  cursor: pointer;
+  margin: 10px;
+}
+
+.voltar {
+  background-color: #ccc;
+  border: none;
+  padding: 12px 30px;
+  cursor: pointer;
+  margin: 10px;
+}
+
+footer {
+  background-color: #7aad43;
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
