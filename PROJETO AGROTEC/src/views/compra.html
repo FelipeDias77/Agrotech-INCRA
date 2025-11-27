@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mercado INCRA - Loja Virtual</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: Arial, sans-serif;
+      background: #333;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+    }
+    .page {
+      background: white;
+      width: 100%;
+      max-width: 500px;
+      border-radius: 8px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 95vh;
+    }
+    header {
+      background: #6c9c3f;
+      color: white;
+      padding: 12px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    header img { height: 35px; }
+    .content {
+      padding: 20px;
+      overflow-y: auto;
+    }
+    .hidden { display: none; }
+    .vendedor img {
+      width: 100%;
+      border-radius: 8px;
+      margin-bottom: 15px;
+    }
+    .vendedor h2 {
+      font-size: 20px;
+      font-weight: bold;
+      text-align: center;
+      margin: 10px 0;
+    }
+    .rating {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 15px;
+    }
+    .rating span {
+      font-size: 22px;
+      color: #ff9900;
+    }
+    .rating small {
+      font-size: 14px;
+    }
+    .produtos {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 15px;
+    }
+    .produto {
+      background: #f4f4f4;
+      border-radius: 8px;
+      text-align: center;
+      padding: 10px;
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+    .produto:hover { transform: translateY(-2px); }
+    .produto img {
+      width: 100%;
+      border-radius: 6px;
+    }
+    .produto p {
+      margin: 5px 0;
+      font-size: 14px;
+    }
+    input, button, select {
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 14px;
+    }
+    button {
+      background: #6c9c3f;
+      color: white;
+      border: none;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    button:hover { background: #5a8534; }
+    .pedido-resumo {
+      margin-top: 20px;
+      background: #f4f4f4;
+      padding: 10px;
+      border-radius: 6px;
+      text-align: center;
+      font-size: 14px;
+    }
+    .cartoes img {
+      width: 40px;
+      margin: 5px;
+      vertical-align: middle;
+    }
+    .popup {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.7);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 10;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s ease;
+    }
+    .popup.active {
+      opacity: 1;
+      pointer-events: all;
+    }
+    .popup .box {
+      background: white;
+      padding: 20px;
+      text-align: center;
+      border-radius: 8px;
+      transform: scale(0.9);
+      transition: transform 0.3s ease;
+    }
+    .popup.active .box {
+      transform: scale(1);
+    }
+    footer {
+      text-align: center;
+      background: #6c9c3f;
+      color: white;
+      padding: 8px;
+      font-size: 12px;
+    }
+    @media (max-width: 600px) {
+      .produtos { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header>
+      <img src="https://via.placeholder.com/100x30?text=INCRA" alt="INCRA">
+      <div>👤 Usuário</div>
+    </header>
+    <div class="content" id="tela-vendedor">
+      <div class="vendedor">
+        <img src="https://via.placeholder.com/400x200?text=Foto+do+Vendedor" alt="José Anchieta da Silva">
+        <h2>JOSÉ ANCHIETA DA SILVA</h2>
+        <div class="rating">
+          <span>⭐ 4.5</span><small>(1.033 Avaliações)</small>
+        </div>
+      </div>
+      <div class="produtos">
+        <div class="produto" onclick="irParaEndereco()">
+          <img src="https://via.placeholder.com/100" alt="Melão">
+          <p>Melão</p>
+          <p>R$ 22,90</p>
+        </div>
+        <div class="produto" onclick="irParaEndereco()">
+          <img src="https://via.placeholder.com/100" alt="Tomate">
+          <p>Tomate</p>
+          <p>R$ 27,90</p>
+        </div>
+        <div class="produto" onclick="irParaEndereco()">
+          <img src="https://via.placeholder.com/100" alt="Maçã">
+          <p>Maçã</p>
+          <p>R$ 25,90</p>
+        </div>
+        <div class="produto" onclick="irParaEndereco()">
+          <img src="https://via.placeholder.com/100" alt="Jaca">
+          <p>Jaca</p>
+          <p>R$ 30,90</p>
+        </div>
+      </div>
+    </div>
+    <div class="content hidden" id="tela-endereco">
+      <h3>1. Seu Endereço</h3>
+      <input type="text" placeholder="Nome do destinatário">
+      <input type="text" placeholder="Endereço completo">
+      <input type="text" placeholder="CEP">
+      <button onclick="irParaPagamento()">Enviar para este endereço</button>
+      <button onclick="voltarParaVendedor()">Voltar</button>
+      <div class="pedido-resumo">
+        <p><strong>Resumo do Pedido</strong></p>
+        <p>Total do Pedido: R$ --,--</p>
+      </div>
+    </div>
+    <div class="content hidden" id="tela-pagamento">
+      <h3>2. Método de Pagamento</h3>
+      <div class="cartoes">
+        <img src="https://via.placeholder.com/40x25?text=Visa" alt="Visa">
+        <img src="https://via.placeholder.com/40x25?text=Master" alt="MasterCard">
+        <img src="https://via.placeholder.com/40x25?text=Cielo" alt="Cielo">
+      </div>
+      <input type="text" placeholder="Número do Cartão">
+      <input type="text" placeholder="Nome do Titular">
+      <input type="text" placeholder="Validade (mm/aa)">
+      <input type="text" placeholder="CVV">
+      <button onclick="finalizarCompra()">Pagar</button>
+      <button onclick="voltarParaEndereco()">Voltar</button>
+      <div class="pedido-resumo">
+        <p><strong>Resumo do Pedido</strong></p>
+        <p>Total do Pedido: R$ --,--</p>
+      </div>
+    </div>
+    <div class="popup" id="popup-confirmacao">
+      <div class="box">
+        <p>Compra Finalizada com Sucesso!</p>
+        <button onclick="voltarParaInicio()">OK</button>
+      </div>
+    </div>
+    <footer>
+      © GovBR | Agricultura Familiar
+    </footer>
+  </div>
+  <script>
+    const audio = new Audio('https://actions.google.com/sounds/v1/cartoon/clang_and_wobble.ogg');
+
+    function irParaEndereco() {
+      document.getElementById('tela-vendedor').classList.add('hidden');
+      document.getElementById('tela-endereco').classList.remove('hidden');
+    }
+
+    function irParaPagamento() {
+      document.getElementById('tela-endereco').classList.add('hidden');
+      document.getElementById('tela-pagamento').classList.remove('hidden');
+    }
+
+    function voltarParaVendedor() {
+      document.getElementById('tela-endereco').classList.add('hidden');
+      document.getElementById('tela-vendedor').classList.remove('hidden');
+    }
+
+    function voltarParaEndereco() {
+      document.getElementById('tela-pagamento').classList.add('hidden');
+      document.getElementById('tela-endereco').classList.remove('hidden');
+    }
+
+    function finalizarCompra() {
+      document.getElementById('popup-confirmacao').classList.add('active');
+      audio.play();
+    }
+
+    function voltarParaInicio() {
+      document.getElementById('popup-confirmacao').classList.remove('active');
+      document.getElementById('tela-pagamento').classList.add('hidden');
+      document.getElementById('tela-endereco').classList.add('hidden');
+      document.getElementById('tela-vendedor').classList.remove('hidden');
+    }
+  </script>
+</body>
+</html>

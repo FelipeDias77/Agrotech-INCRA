@@ -1,0 +1,114 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    width: 90%;
+    max-width: 800px;
+    padding: 50px;
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.left {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 25px;
+}
+
+.logo img {
+    max-width: 80%;
+}
+
+.right {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: -50px;
+}
+
+.login-form label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: bold;
+}
+
+.login-form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.btn {
+    width: 100%;
+    padding: 100px;
+    margin-bottom: 10px;
+    border: none;
+    background: #5a8f45;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.btn:hover {
+    background: #9DCC44;
+    box-shadow: 0 8px 16px #CCC;
+    transform: scale(1.05);
+}
+
+.link {
+    display: block;
+    margin-top: 10px;
+    text-decoration: none;
+    color: #4CAF50;
+    font-size: 14px;
+    text-align: center;
+}
+
+.link:hover {
+    text-decoration: underline;
+}
+
+.btn-link {
+    width: 100px;
+    padding: 10px 180px;
+    background-color: #5a8f45;
+    border-radius: 5px;
+    color: white;
+    font-size: 23px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-decoration: none; /* Remove a linha do texto */
+    font-family: Arial, sans-serif;
+    display: block;
+    margin: 10px;
+    text-indent: -40px;
+}
+
+.btn-link:hover {
+    background-color: #9DCC44;
+    box-shadow: 0 8px 16px #CCC;
+    transform: scale(1.05);
+}
+

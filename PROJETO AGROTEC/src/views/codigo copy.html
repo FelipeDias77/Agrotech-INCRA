@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Insira o código - INCRA</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <button onclick="history.back()" class="back-button">Voltar</button>
+  <body>
+    <header class="header">
+        <a href="https://www.gov.br/incra/pt-br" class="icon-btn">
+            <img src="logo/incra.png" alt="Incra">
+            <span class="icon-text" id="typed-text"></span>
+        </a>
+        <div class="search-bar">
+            <input type="text" placeholder="Pesquisar na AgroTech...">
+            <button>Pesquisar</button>
+        </div>
+
+        <div class="user">
+            <div class="perfil">
+                <button id="perfil-btn">
+                    <img src="perfil/perfil.png" alt="Perfil">
+                </button>
+            </div>
+            <div id="options" class="hidden">
+                <a href="login.html">
+                    <button class="action-btn">Criar Conta</button>
+                </a>
+                <a href="entrar.html">
+                    <button class="action-btn">Entrar na Conta</button>
+                </a>
+            </div>
+            <div class="menu">
+                <a href="#">Cesta</a>
+                <a href="#">Minha Conta</a>
+                <a href="#">Ajuda</a>
+                <a href="#">Sobre</a>
+            </div>
+        
+            <!-- Botão com imagem para ativar/desativar a barra lateral -->
+            <img id="toggleButton" src="icons/next.png" alt="Abrir/Fechar Barra" />
+        
+        </div>
+    </header>
+
+  <div class="main-box">
+    <h2>Insira o código que te enviamos por *****</h2>
+    <p class="email">joaodasilva@gmail.com</p>
+    <a href="#" class="link-trocar">Trocar de conta</a>
+
+    <input type="text" maxlength="6" placeholder="Digite o código" class="input-codigo" />
+
+    <div class="botoes-codigo">
+      <button class="confirmar" onclick="window.location.href='nova-senha.html'">Confirmar</button>
+      <button class="voltar" onclick="window.location.href='index.html'">Voltar</button>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <p>Desenvolvido por Felipe Dias, Pedro Neto, Endryo Matos e Felipe Madson © 2025 AgroTech</p>
+</footer>
+<script src="javinha.js"></script>
+</body>
+</html>
