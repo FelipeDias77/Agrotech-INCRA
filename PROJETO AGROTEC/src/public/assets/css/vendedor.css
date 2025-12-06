@@ -580,6 +580,34 @@ li {
     height: 100%;
     object-fit: cover;
 }
+/* Botões de navegação (setas) */
+.carousel__prev,
+.carousel__next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.7);   /* fundo mais escuro para contraste */
+    color: #fff;                   /* cor branca bem visível */
+    text-decoration: none;
+    font-size: 3rem;               /* aumenta tamanho da seta */
+    font-weight: bold;             /* deixa a seta mais grossa */
+    padding: 0.8rem 1rem;          /* aumenta área clicável */
+    border-radius: 50%;            /* formato circular */
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5); /* sombra para destacar */
+    z-index: 5;                    /* garante que fique acima da imagem */
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.carousel__prev:hover,
+.carousel__next:hover {
+    background: #5a8f45;           /* verde do tema ao passar o mouse */
+    transform: scale(1.1);         /* leve aumento no hover */
+}
+
+.carousel__prev { left: 20px; }
+.carousel__next { right: 20px; }
+
 
 /* fim do banerrrrrrrr */
 

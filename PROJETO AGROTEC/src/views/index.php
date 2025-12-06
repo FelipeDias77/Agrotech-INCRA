@@ -155,6 +155,6 @@ try {
     <footer class="footer">
         <p>Desenvolvido por Felipe Dias, Pedro Neto, Endryo Matos e Felipe Madson © 2025 AgroTech</p>
     </footer>
-    <script src="javinha.js"></script>
+     <script src="../public/assets/js/javinha.js"></script>
 </body>
 </html>

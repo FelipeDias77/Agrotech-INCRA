@@ -4,13 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Criar Conta</title>
-    <link rel="stylesheet" href="logincss.css">
+    <link rel="stylesheet" href="../public/assets/css/logincss.css">
 </head>
 <body>
     <button onclick="history.back()" class="back-button">Voltar</button>
+    <a href="entrar.html" class="back-button">Voltar</a>
 
     <div class="container">
-        <form class="formulario">
+        <!-- Agora o formulário envia para login.php -->
+        <form class="formulario" action="login.php" method="POST">
             <h2>Criar Conta</h2>
 
             <div class="campo">
@@ -44,6 +46,11 @@
             </div>
 
             <div class="campo">
+                <label for="senha">Senha:</label>
+                <input type="password" id="senha" name="senha" placeholder="Digite sua senha" required>
+            </div>
+
+            <div class="campo">
                 <label for="tipoUsuario">Tipo de Usuário:</label>
                 <div class="opcoes">
                     <label for="comprador">Comprador</label>
@@ -53,18 +60,15 @@
                     <input type="radio" id="produtor" name="tipoUsuario" value="produtor" required>
                 </div>
             </div>
+
             <div class="containex">
-                <a href="selecionarLocal.html" class="btn-link">Criar Conta</a>
+                <button type="submit" class="btn-link">Criar Conta</button>
             </div>
             <h3>ou</h3>
             <div class="containex">
-                <!-- Botão com link para outro site -->
-                <a href="https://acesso.gov.br/" class="btn-link">
-                    Entrar Pelo GOV.BR
-                </a>
+                <a href="https://acesso.gov.br/" class="btn-link">Entrar Pelo GOV.BR</a>
             </div>
         </form>
     </div>
-
 </body>
 </html>

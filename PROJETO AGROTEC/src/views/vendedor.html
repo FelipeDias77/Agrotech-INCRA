@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AgroTech</title>
-    <link rel="stylesheet" href="vendedor.css">
+    <link rel="stylesheet" href="../public/assets/css/vendedor.css">
 </head>
 <body>
     <header class="header">
         <a href="https://www.gov.br/incra/pt-br" class="icon-btn">
-            <img src="logo/incra.png" alt="Incra">
+            <img src="../public/assets/img/logo/incra.png" alt="Incra">
             <span class="icon-text" id="typed-text"></span>
         </a>
         <div class="search-bar">
@@ -20,7 +20,7 @@
         <div class="user">
             <div class="perfil">
                 <button id="perfil-btn">
-                    <img src="perfil/perfil.png" alt="Perfil">
+                    <img src="../public/assets/img/perfil/perfil.png" alt="Perfil">
                 </button>
             </div>
             <div id="options" class="hidden">
@@ -39,62 +39,76 @@
             </div>
         
             <!-- Botão com imagem para ativar/desativar a barra lateral -->
-            <img id="toggleButton" src="icons/next.png" alt="Abrir/Fechar Barra" />
+            <img id="toggleButton" src="../public/assets/img/icons/next.png" alt="Abrir/Fechar Barra" />
         
         </div>
-        <div class="circle-button-container">
+       <!--<div class="circle-button-container">
             <a href="URL_DA_PAGINA.html" class="circle-button">
               <img src="icons/most.png" alt="Adicionar Produto">
             </a>
           </div>
-          
+        --> 
     </header>
 
     <main> 
-        <section class="carousel" aria-label="Gallery">
-            <ol class="carousel__viewport">
-                <li id="carousel__slide1" class="carousel__slide">
-                    <div class="carousel__snapper">
-                        <img src="img/coisa.jpeg" alt="Banner">
-                    </div>
-                </li>
-                <li id="carousel__slide2" class="carousel__slide">
-                    <div class="carousel__snapper">
-                        <img src="img/coisa2.jpg" alt="Descrição da imagem 2">
-                    </div>
-                </li>
-                <li id="carousel__slide3" class="carousel__slide">
-                    <div class="carousel__snapper">
-                        <img src="img/coisa3.jpg" alt="Descrição da imagem 3">
-                    </div>
-                </li>
-            </ol>
-          </section>
+       <section class="carousel" aria-label="Gallery">
+  <ol class="carousel__viewport">
+    <li id="carousel__slide1" class="carousel__slide">
+      <div class="carousel__snapper">
+        <img src="../public/assets/img/coisa1.jpeg" alt="Banner">
+      </div>
+      <a href="#carousel__slide3" class="carousel__prev">‹</a>
+      <a href="#carousel__slide2" class="carousel__next">›</a>
+    </li>
+    <li id="carousel__slide2" class="carousel__slide">
+      <div class="carousel__snapper">
+        <img src="../public/assets/img/coisa2.jpg" alt="Descrição da imagem 2">
+      </div>
+      <a href="#carousel__slide1" class="carousel__prev">‹</a>
+      <a href="#carousel__slide3" class="carousel__next">›</a>
+    </li>
+    <li id="carousel__slide3" class="carousel__slide">
+      <div class="carousel__snapper">
+        <img src="../public/assets/img/coisa3.jpg" alt="Descrição da imagem 3">
+      </div>
+      <a href="#carousel__slide2" class="carousel__prev">‹</a>
+      <a href="#carousel__slide1" class="carousel__next">›</a>
+    </li>
+  </ol>
+
+  <!-- indicadores -->
+  <aside class="carousel__navigation">
+    <ol>
+      <li><a href="#carousel__slide1">1</a></li>
+      <li><a href="#carousel__slide2">2</a></li>
+      <li><a href="#carousel__slide3">3</a></li>
+    </ol>
+  </aside>
 </section>
-        
+
 <div class="list-card">
     <div class="card-container">
-        <img src="icons/encomenda.png" alt="Retire sua Encomenda">
+        <img src="../public/assets/img/icons/encomenda.png" alt="Retire sua Encomenda">
         <h3>Resgate a Encomenda</h3>
         <button>Mostrar</button>
     </div>
     <div class="card-container">
-        <img src="icons/local.png" alt="Ponto de Retirada">
+        <img src="../public/assets/img/icons/local.png" alt="Ponto de Retirada">
         <h3>Ponto de Retirada</h3>
         <button>Mostrar</button>
     </div>
     <div class="card-container">
-        <img src="icons/mais-vendidos.png" alt="Produtos Mais Vendidos">
+        <img src="../public/assets/img/icons/mais-vendidos.png" alt="Produtos Mais Vendidos">
         <h3>Mais Vendidos</h3>
         <button>Mostrar</button>
     </div>
     <div class="card-container">
-        <img src="icons/pagamento.png" alt="Meios de Pagamento">
+        <img src="../public/assets/img/icons/pagamento.png" alt="Meios de Pagamento">
         <h3>Meios de Pagamento</h3>
         <button>Mostrar</button>
     </div>
     <div class="card-container">
-        <img src="icons/adicionar.png" alt="Adicionar Produto">
+        <img src="../public/assets/img/icons/adicionar.png" alt="Adicionar Produto">
         <h3>Adicionar Produto</h3>
         <button>Mostrar</button>
     </div>
@@ -111,7 +125,7 @@
             <h2>Mais indicados para você</h2>
             <div class="product-list">
                 <div class="product-card">
-                    <img src="img/cenoura.png" alt="Cenoura">
+                    <img src="../public/assets/img/image2.png" alt="Cenoura">
                     <h3>Cenoura</h3>
                     <p>R$ 29,90</p>
                     <button type="button"><a href="carrot.html" class="buttin" alt="Cenoura">
@@ -120,7 +134,7 @@
                     
                 </div>
                 <div class="product-card">
-                    <img src="img/pimenta.png" alt="Pimenta">
+                    <img src="../public/assets/img/pimenta2.png" alt="Pimenta">
                     <h3>Pimenta</h3>
                     <p>R$ 39,90</p>
                     <button type="button"><a href="carrot.html" class="buttin" alt="Cenoura">
@@ -128,13 +142,13 @@
                     </a></button>
                 </div>
                 <div class="product-card">
-                    <img src="img/alface.png" alt="Alface">
+                    <img src="../public/assets/img/alface2.png" alt="Alface">
                     <h3>Alface</h3>
                     <p>R$ 29,90</p>
                     <button>Comprar</button>
                 </div>
                 <div class="product-card">
-                    <img src="img/tomate.jpeg" alt="Tomate">
+                    <img src="../public/assets/img/tomate2.jpeg" alt="Tomate">
                     <h3>Tomate</h3>
                     <p>R$ 29,90</p>
                     <button>Comprar</button>
@@ -146,7 +160,7 @@
     <footer class="footer">
         <p>Desenvolvido por Felipe Dias, Pedro Neto, Endryo Matos e Felipe Madson © 2025 AgroTech</p>
     </footer>
-    <script src="javinha.js"></script>
+     <script src="../public/assets/js/javinha.js"></script>
     <script>
         window.onload = function() {
           alert('Seja Bem Vindo Produtor!');

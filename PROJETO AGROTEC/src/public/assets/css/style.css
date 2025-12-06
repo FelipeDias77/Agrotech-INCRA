@@ -112,3 +112,38 @@ footer {
   bottom: 0;
   width: 100%;
 }
+/* Botão voltar (link estilizado como botão) */
+.back-button {
+  background-color: #ccc;
+  color: #333;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  text-decoration: none;   /* remove sublinhado */
+  display: inline-block;   /* faz o link se comportar como botão */
+  margin: 10px;
+  font-weight: bold;
+}
+
+.back-button:hover {
+  background-color: #999;
+}
+
+/* Botões de ação (Criar Conta / Entrar na Conta) */
+.action-btn {
+  background-color: #7aad43;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  margin: 5px;
+  font-weight: bold;
+}
+
+.action-btn:hover {
+  background-color: #5f8c32;
+}
