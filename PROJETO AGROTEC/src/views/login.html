@@ -3,37 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Criar Conta</title>
+    <title>AgroTech - Criar Conta</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../public/assets/css/logincss.css">
 </head>
 <body>
     <button onclick="history.back()" class="back-button">Voltar</button>
-    <a href="entrar.html" class="back-button">Voltar</a>
 
     <div class="container">
-        <!-- Agora o formulário envia para login.php -->
-        <form class="formulario" action="login.php" method="POST">
-            <h2>Criar Conta</h2>
+        <form class="formulario" id="formCadastro">
+            <h2>Crie sua Conta AgroTech</h2>
 
             <div class="campo">
                 <label for="nome">Nome Completo:</label>
-                <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo" required>
+                <input type="text" id="nome" required>
             </div>
 
             <div class="campo">
                 <label for="cpf">CPF:</label>
-                <input type="text" id="cpf" name="cpf" placeholder="Digite seu CPF" required>
+                <input type="text" id="cpf" required>
             </div>
 
             <div class="campo">
                 <label for="dataNascimento">Data de Nascimento:</label>
-                <input type="date" id="dataNascimento" name="dataNascimento" required>
+                <input type="date" id="dataNascimento" required>
             </div>
 
             <div class="campo">
                 <label for="genero">Gênero:</label>
-                <select id="genero" name="genero" required>
-                    <option value="">Selecione seu gênero</option>
+                <select id="genero" required>
+                    <option value="" disabled selected>Selecione seu gênero</option>
                     <option value="masculino">Masculino</option>
                     <option value="feminino">Feminino</option>
                     <option value="outro">Outro</option>
@@ -42,33 +41,89 @@
 
             <div class="campo">
                 <label for="email">E-mail:</label>
-                <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required>
+                <input type="email" id="email" required>
             </div>
 
             <div class="campo">
                 <label for="senha">Senha:</label>
-                <input type="password" id="senha" name="senha" placeholder="Digite sua senha" required>
+                <input type="password" id="senha" required>
             </div>
 
             <div class="campo">
                 <label for="tipoUsuario">Tipo de Usuário:</label>
                 <div class="opcoes">
-                    <label for="comprador">Comprador</label>
-                    <input type="radio" id="comprador" name="tipoUsuario" value="comprador" required>
-            
-                    <label for="produtor">Produtor</label>
-                    <input type="radio" id="produtor" name="tipoUsuario" value="produtor" required>
+                    <label for="comprador">
+                        <input type="radio" id="comprador" name="tipoUsuario" value="comprador" required>
+                        Comprador
+                    </label>
+                    <label for="produtor">
+                        <input type="radio" id="produtor" name="tipoUsuario" value="produtor" required>
+                        Produtor
+                    </label>
                 </div>
             </div>
 
             <div class="containex">
-                <button type="submit" class="btn-link">Criar Conta</button>
+                <button type="submit" class="btn-primary">Criar Conta</button>
             </div>
-            <h3>ou</h3>
+            
+            <h3 class="separator">ou</h3>
+            
             <div class="containex">
-                <a href="https://acesso.gov.br/" class="btn-link">Entrar Pelo GOV.BR</a>
+                <a href="https://acesso.gov.br/" class="btn-govbr" target="_blank">Entrar Pelo GOV.BR</a>
             </div>
         </form>
     </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script>
+    const supabaseClient = supabase.createClient(
+        "https://mckcqejlvuxwywwgoydu.supabase.co",
+        "sb_publishable_nZ4GQsPbe1QR3g4Fh9j66w_dSYpD7bp"
+    );
+
+    document.getElementById('formCadastro').addEventListener('submit', async (e) => {
+        e.preventDefault();
+
+        const nome = document.getElementById('nome').value;
+        const cpf = document.getElementById('cpf').value;
+        const dataNascimento = document.getElementById('dataNascimento').value;
+        const genero = document.getElementById('genero').value;
+        const email = document.getElementById('email').value;
+        const senha = document.getElementById('senha').value;
+        const tipoUsuario = document.querySelector('input[name="tipoUsuario"]:checked').value;
+
+        const { data, error } = await supabaseClient.auth.signUp({
+            email: email,
+            password: senha
+        });
+
+        if (error) {
+            alert("Erro ao criar conta: " + error.message);
+            return;
+        }
+
+        const userId = data.user.id;
+
+        const { error: insertError } = await supabaseClient
+            .from("perfis")
+            .insert({
+                id: userId,
+                nome: nome,
+                cpf: cpf,
+                data_nascimento: dataNascimento,
+                genero: genero,
+                tipo_usuario: tipoUsuario
+            });
+
+        if (insertError) {
+            alert("Erro ao salvar perfil: " + insertError.message);
+            return;
+        }
+
+        alert("Conta criada com sucesso!");
+        window.location.href = "login.php";
+    });
+</script>
 </body>
 </html>

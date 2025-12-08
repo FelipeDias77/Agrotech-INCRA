@@ -3,168 +3,113 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AgroTech</title>
-    <link rel="stylesheet" href="../public/assets/css/vendedor.css">
+    <title>Perfil do Produtor - AgroTech</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../public/assets/css/vendedor.css"> 
 </head>
 <body>
+    
     <header class="header">
-        <a href="https://www.gov.br/incra/pt-br" class="icon-btn">
-            <img src="../public/assets/img/logo/incra.png" alt="Incra">
-            <span class="icon-text" id="typed-text"></span>
-        </a>
-        <div class="search-bar">
-            <input type="text" placeholder="Pesquisar na AgroTech...">
-            <button>Pesquisar</button>
-        </div>
+        <div class="header-content">
+            <a href="index.html" class="logo">
+                <img src="../public/assets/img/logo/incra.png" alt="Logo AgroTech" class="logo-img">
+            </a>
 
-        <div class="user">
-            <div class="perfil">
-                <button id="perfil-btn">
-                    <img src="../public/assets/img/perfil/perfil.png" alt="Perfil">
-                </button>
+            <div class="search-bar">
+                <input type="text" placeholder="Pesquisar na AgroTech...">
+                <button>Pesquisar</button>
             </div>
-            <div id="options" class="hidden">
-                <a href="login.html">
-                    <button class="action-btn">Criar Conta</button>
-                </a>
-                <a href="entrar.html">
-                    <button class="action-btn">Entrar na Conta</button>
-                </a>
-            </div>
-            <div class="menu">
+            
+            <nav class="user-nav">
                 <a href="#">Cesta</a>
-                <a href="#">Minha Conta</a>
+                <a href="#">Adicionar Produto</a>
                 <a href="#">Ajuda</a>
                 <a href="#">Sobre</a>
+            </nav>
+
+            <div class="user-access">
+                <a href="perfil.html" class="action-btn">
+                    Meu Perfil
+                </a>
+                <a href="logout.html" class="action-btn action-btn-alt">
+                    Sair
+                </a>
             </div>
-        
-            <!-- Botão com imagem para ativar/desativar a barra lateral -->
-            <img id="toggleButton" src="../public/assets/img/icons/next.png" alt="Abrir/Fechar Barra" />
-        
         </div>
-       <!--<div class="circle-button-container">
-            <a href="URL_DA_PAGINA.html" class="circle-button">
-              <img src="icons/most.png" alt="Adicionar Produto">
-            </a>
-          </div>
-        --> 
     </header>
 
-    <main> 
-       <section class="carousel" aria-label="Gallery">
-  <ol class="carousel__viewport">
-    <li id="carousel__slide1" class="carousel__slide">
-      <div class="carousel__snapper">
-        <img src="../public/assets/img/coisa1.jpeg" alt="Banner">
-      </div>
-      <a href="#carousel__slide3" class="carousel__prev">‹</a>
-      <a href="#carousel__slide2" class="carousel__next">›</a>
-    </li>
-    <li id="carousel__slide2" class="carousel__slide">
-      <div class="carousel__snapper">
-        <img src="../public/assets/img/coisa2.jpg" alt="Descrição da imagem 2">
-      </div>
-      <a href="#carousel__slide1" class="carousel__prev">‹</a>
-      <a href="#carousel__slide3" class="carousel__next">›</a>
-    </li>
-    <li id="carousel__slide3" class="carousel__slide">
-      <div class="carousel__snapper">
-        <img src="../public/assets/img/coisa3.jpg" alt="Descrição da imagem 3">
-      </div>
-      <a href="#carousel__slide2" class="carousel__prev">‹</a>
-      <a href="#carousel__slide1" class="carousel__next">›</a>
-    </li>
-  </ol>
+    <main class="main-content">
+        
+        <div class="producer-banner">
+            </div>
 
-  <!-- indicadores -->
-  <aside class="carousel__navigation">
-    <ol>
-      <li><a href="#carousel__slide1">1</a></li>
-      <li><a href="#carousel__slide2">2</a></li>
-      <li><a href="#carousel__slide3">3</a></li>
-    </ol>
-  </aside>
-</section>
-
-<div class="list-card">
-    <div class="card-container">
-        <img src="../public/assets/img/icons/encomenda.png" alt="Retire sua Encomenda">
-        <h3>Resgate a Encomenda</h3>
-        <button>Mostrar</button>
-    </div>
-    <div class="card-container">
-        <img src="../public/assets/img/icons/local.png" alt="Ponto de Retirada">
-        <h3>Ponto de Retirada</h3>
-        <button>Mostrar</button>
-    </div>
-    <div class="card-container">
-        <img src="../public/assets/img/icons/mais-vendidos.png" alt="Produtos Mais Vendidos">
-        <h3>Mais Vendidos</h3>
-        <button>Mostrar</button>
-    </div>
-    <div class="card-container">
-        <img src="../public/assets/img/icons/pagamento.png" alt="Meios de Pagamento">
-        <h3>Meios de Pagamento</h3>
-        <button>Mostrar</button>
-    </div>
-    <div class="card-container">
-        <img src="../public/assets/img/icons/adicionar.png" alt="Adicionar Produto">
-        <h3>Adicionar Produto</h3>
-        <button>Mostrar</button>
-    </div>
-</div>
-
-<script>
-  function adicionarProduto() {
-    alert("Interface para adicionar produto.");
-  }
-</script>
-
-    
-        <section class="products">
-            <h2>Mais indicados para você</h2>
-            <div class="product-list">
-                <div class="product-card">
-                    <img src="../public/assets/img/image2.png" alt="Cenoura">
-                    <h3>Cenoura</h3>
-                    <p>R$ 29,90</p>
-                    <button type="button"><a href="carrot.html" class="buttin" alt="Cenoura">
-                        Comprar
-                    </a></button>
-                    
-                </div>
-                <div class="product-card">
-                    <img src="../public/assets/img/pimenta2.png" alt="Pimenta">
-                    <h3>Pimenta</h3>
-                    <p>R$ 39,90</p>
-                    <button type="button"><a href="carrot.html" class="buttin" alt="Cenoura">
-                        Comprar
-                    </a></button>
-                </div>
-                <div class="product-card">
-                    <img src="../public/assets/img/alface2.png" alt="Alface">
-                    <h3>Alface</h3>
-                    <p>R$ 29,90</p>
-                    <button>Comprar</button>
-                </div>
-                <div class="product-card">
-                    <img src="../public/assets/img/tomate2.jpeg" alt="Tomate">
-                    <h3>Tomate</h3>
-                    <p>R$ 29,90</p>
-                    <button>Comprar</button>
-                </div>
+        <section class="producer-info-card">
+            <img src="../public/assets/img/perfil/perfil.png" alt="Foto do Produtor" class="producer-avatar">
+            
+            <div class="producer-details">
+                <h1>Sítio Raízes do Campo</h1>
+                <p>Membro desde 2022 | Classificação: 4.8/5.0 (2.500 vendas)</p>
+                <p>Localização: Maringá, PR</p>
+            </div>
+            
+            <div class="producer-actions">
+                <a href="gerenciar-produtos.html" class="btn-manage-sales">
+                    Gerenciar Vendas
+                </a>
+                <a href="index.html" class="btn-buy-products">
+                    Comprar Produtos
+                </a>
             </div>
         </section>
+
+        <section class="products-section">
+            <h2>Produtos do Sítio Raízes do Campo</h2>
+            
+            <div class="product-list">
+                
+                <div class="product-card">
+                    <img src="../public/assets/img/cenoura3].png" alt="Cenoura">
+                    <div class="card-details">
+                        <h3>Cenoura Orgânica</h3>
+                        <p class="price">R$ 29,90 / Kg</p>
+                        <button class="btn-primary">Ver Detalhes</button>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <img src="../public/assets/img/pimenta2.png" alt="Pimenta">
+                    <div class="card-details">
+                        <h3>Pimenta Dedo de Moça</h3>
+                        <p class="price">R$ 39,90 / Pote</p>
+                        <button class="btn-primary">Ver Detalhes</button>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <img src="../public/assets/img/alface2.png" alt="Alface">
+                    <div class="card-details">
+                        <h3>Alface Crespa</h3>
+                        <p class="price">R$ 15,00 / Unidade</p>
+                        <button class="btn-primary">Ver Detalhes</button>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <img src="../public/assets/img/tomate2.jpeg" alt="Tomate">
+                    <div class="card-details">
+                        <h3>Tomate Italiano</h3>
+                        <p class="price">R$ 29,90 / Kg</p>
+                        <button class="btn-primary">Ver Detalhes</button>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+        
     </main>
 
     <footer class="footer">
-        <p>Desenvolvido por Felipe Dias, Pedro Neto, Endryo Matos e Felipe Madson © 2025 AgroTech</p>
+        <p>gov.br | Agricultura Familiar | &copy; 2025 AgroTech</p>
     </footer>
-     <script src="../public/assets/js/javinha.js"></script>
-    <script>
-        window.onload = function() {
-          alert('Seja Bem Vindo Produtor!');
-        };
-    </script>
 </body>
 </html>

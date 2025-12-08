@@ -1,119 +1,199 @@
-// Logo
-// Quando o mouse passar sobre o ícone
-document.querySelector('.icon-btn').addEventListener('mouseenter', function() {
-    var textElement = document.getElementById('typed-text');
-    var textToShow = "| AgroTech"; // Texto que você quer que apareça
-    
-    textElement.innerHTML = textToShow; // Coloca o texto diretamente
-    textElement.style.opacity = 1; // Faz o texto aparecer com efeito fade-in
-});
+/**
+ * javinha.js
+ * * Este arquivo contém as interações JavaScript para o e-commerce AgroTech, 
+ * cobrindo funcionalidades em diversas páginas (Home, Login, Layout Comum).
+ */
 
-// LOGIN
-document.addEventListener("DOMContentLoaded", () => {
+// 1. Variável Global para a URL da Home (Melhora Manutenção)
+const HOME_URL = 'index.html';
+
+// ==========================================
+// 2. Lógica do Header (Efeito Logo e Dropdown)
+// ==========================================
+
+// Função para o efeito de texto na logo (Se aplicável no layout principal)
+function initLogoHover() {
+    // Usando seletores do seu código original que referenciam elementos de logo/texto
+    const iconBtn = document.querySelector('.icon-btn');
+    const textElement = document.getElementById('typed-text');
+    
+    if (!iconBtn || !textElement) return;
+
+    const textToShow = "| AgroTech"; 
+
+    // Oculta o texto ao sair do foco
+    iconBtn.addEventListener('mouseleave', function() {
+         textElement.innerHTML = ''; // Limpa o texto
+         textElement.style.opacity = 0; // Esconde com fade-out (se houver CSS de transição)
+    });
+
+    // Mostra o texto ao passar o mouse
+    iconBtn.addEventListener('mouseenter', function() {
+        textElement.innerHTML = textToShow; 
+        textElement.style.opacity = 1; 
+    });
+}
+
+
+// Função para inicializar o dropdown de perfil (Se for usado na Home/Produtos)
+function initProfileDropdown() {
     const perfilBtn = document.getElementById("perfil-btn");
     const options = document.getElementById("options");
 
+    // Retorna se os elementos não existirem na página atual
+    if (!perfilBtn || !options) return; 
+
     // Mostra ou oculta as opções ao clicar no botão
     perfilBtn.addEventListener("click", (e) => {
-        e.stopPropagation(); // Impede que o clique no botão feche as opções
-        options.classList.toggle("show"); // Alterna a visibilidade das opções
+        e.stopPropagation(); 
+        options.classList.toggle("show");
     });
 
-    // Fecha as opções ao clicar fora da área de opções
+    // Fecha as opções ao clicar fora do dropdown
     document.addEventListener("click", (e) => {
-        if (!options.contains(e.target) && e.target !== perfilBtn) {
-            options.classList.remove("show"); // Remove a classe "show" para esconder as opções
+        // Verifica se o clique não foi no botão e nem dentro das opções
+        if (!perfilBtn.contains(e.target) && !options.contains(e.target)) {
+            options.classList.remove("show");
         }
     });
-});
 
-// Esconde as opções ao clicar em qualquer outro lugar, caso esteja visível
-document.addEventListener("click", () => {
-    if (options.classList.contains("show")) {
-        options.classList.remove("show");
-    }
-});
+    // Impede que um clique dentro das opções a feche imediatamente
+    options.addEventListener("click", (e) => {
+        e.stopPropagation(); 
+    });
+    
+    // Seu código original tinha esta repetição, que é desnecessária se o código acima estiver ativo:
+    // document.addEventListener("click", () => {
+    //     if (options.classList.contains("show")) {
+    //         options.classList.remove("show");
+    //     }
+    // });
+}
 
-// Impede o fechamento ao clicar nas próprias opções
-options.addEventListener("click", (e) => {
-    e.stopPropagation(); // Impede que o clique dentro das opções feche elas
-});
+// ==========================================
+// 3. Lógica da Barra Lateral (Menu Mobile/Sidebar)
+// ==========================================
 
-// BARRA LATERAL
-const menu = document.querySelector('.menu');
-const toggleButton = document.querySelector('#toggleButton');
+function initSideBar() {
+    const menu = document.querySelector('.menu'); // O bloco de links
+    const toggleButton = document.querySelector('#toggleButton'); // O ícone de toggle (n.png)
+    
+    if (!menu || !toggleButton) return;
 
-let isMenuVisible = false;
+    let isMenuVisible = false;
 
-toggleButton.addEventListener('click', () => {
-    if (isMenuVisible) {
-        menu.style.left = '-200px'; // Esconde a barra lateral
-        toggleButton.style.left = '20px'; // Mantém o botão na posição inicial
-    } else {
-        menu.style.left = '0'; // Exibe a barra lateral
-        toggleButton.style.left = '165px'; // Move o botão para acompanhar a barra lateral
-    }
+    toggleButton.addEventListener('click', () => {
+        if (isMenuVisible) {
+            // Esconde: Deixa a responsabilidade de animação para o CSS (melhor prática)
+            // Se estiver usando o CSS do seu código original:
+            menu.style.left = '-200px'; 
+            toggleButton.style.left = '20px'; 
+            // Uma melhoria seria usar classes CSS (e.g., menu.classList.remove('active'))
+        } else {
+            // Exibe
+            menu.style.left = '0'; 
+            toggleButton.style.left = '165px'; 
+        }
 
-    isMenuVisible = !isMenuVisible;
-});
+        isMenuVisible = !isMenuVisible;
+    });
+}
 
-document.addEventListener("DOMContentLoaded", function () {
+
+// ==========================================
+// 4. Lógica do Carousel (Slide Automático)
+// ==========================================
+
+function initCarousel() {
     const carousel = document.querySelector(".carousel__viewport");
+    if (!carousel) return; 
+    
     let index = 0;
-  
+    const intervalTime = 5000; // 5 segundos
+
     function nextSlide() {
-      const slides = document.querySelectorAll(".carousel__slide");
-      index = (index + 1) % slides.length; // Loop infinito
-      carousel.scrollTo({
-        left: slides[index].offsetLeft,
-        behavior: "smooth"
-      });
+        const slides = document.querySelectorAll(".carousel__slide");
+        if (slides.length === 0) return;
+
+        index = (index + 1) % slides.length; 
+        
+        if (slides[index]) { 
+            carousel.scrollTo({
+                left: slides[index].offsetLeft,
+                behavior: "smooth"
+            });
+        }
     }
-  
-    setInterval(nextSlide, 5000); // Troca de slide a cada 5 segundos
-  });
+    
+    setInterval(nextSlide, intervalTime);
+}
 
-// DJOFFA
-const form = document.getElementById('loginForm');
-const nome = document.getElementById('nome');
-const cpf = document.getElementById('cpf');
-const email = document.getElementById('senha');
+// ==========================================
+// 5. Lógica dos Formulários (Login/Cadastro/Verificação)
+// ==========================================
 
-// Evento de envio do formulário
-form.addEventListener('submit', function (e) {
-    e.preventDefault(); // Impede o envio do formulário para evitar recarregar a página
+// Função para lidar com o envio e validação do Formulário de Login/Cadastro
+function initAuthForms() {
+    // --- Lógica de Validação (DJOFFA) ---
+    const form = document.getElementById('loginForm');
+    const nomeInput = document.getElementById('nome');
+    const cpfInput = document.getElementById('cpf');
+    const senhaInput = document.getElementById('senha'); 
 
-    // Validação básica
-    if (!nome.value.trim()) {
-        alert('Por favor, preencha o campo Nome Completo.');
-        nome.focus();
-        return;
+    if (form) { // Só executa se o formulário de login estiver na página
+        form.addEventListener('submit', function (e) {
+            e.preventDefault(); 
+
+            let isValid = true;
+            
+            const validateField = (input, message) => {
+                if (!input || !input.value.trim()) {
+                    alert(message);
+                    input.focus();
+                    isValid = false;
+                    return false;
+                }
+                return true;
+            };
+
+            // Certifique-se de que os IDs existam na página
+            if (
+                validateField(nomeInput, 'Por favor, preencha o campo Nome Completo.') &&
+                validateField(cpfInput, 'Por favor, preencha o campo CPF.') &&
+                validateField(senhaInput, 'Por favor, preencha o campo Senha.')
+            ) {
+                alert('Login realizado com sucesso! (Simulado)');
+                // Aqui você faria a requisição final
+                // form.submit();
+            }
+        });
     }
+    
+    // --- Funções Auxiliares (Botões) ---
+    document.getElementById('createAccount')?.addEventListener('click', function () {
+        alert('Funcionalidade Criar Nova Conta em desenvolvimento!');
+        window.location.href = 'selecionarLocal.html'; 
+    });
 
-    if (!cpf.value.trim()) {
-        alert('Por favor, preencha o campo CPF.');
-        cpf.focus();
-        return;
-    }
+    document.getElementById('forgotPassword')?.addEventListener('click', function (e) {
+        e.preventDefault();
+        alert('Funcionalidade Esqueceu a Senha em desenvolvimento!');
+    });
+}
 
-    if (!senha.value.trim()) {
-        alert('Por favor, preencha o campo Senha');
-        senha.focus();
-        return;
-    }
+// ==========================================
+// 6. Inicialização Global (Execução após o carregamento do DOM)
+// ==========================================
 
-    // Mensagem de sucesso simulada
-    alert('Login realizado com sucesso!');
+document.addEventListener("DOMContentLoaded", () => {
+    console.log("AgroTech: DOM totalmente carregado. Inicializando scripts multipage...");
+    
+    // Inicializações de Layout Comum (Header/Sidebar/Logo)
+    initLogoHover(); 
+    initProfileDropdown(); 
+    initSideBar(); 
+
+    // Inicializações específicas de Página
+    initAuthForms();
+    initCarousel(); 
 });
-
-// Função para criar nova conta
-document.getElementById('createAccount').addEventListener('click', function () {
-    alert('Funcionalidade Criar Nova Conta em desenvolvimento!');
-    window.location.href = 'selecionarLocal.html';
-});
-
-// Função para recuperar senha
-document.getElementById('forgotPassword').addEventListener('click', function (e) {
-    e.preventDefault();
-    alert('Funcionalidade Esqueceu a Senha em desenvolvimento!');
-});  

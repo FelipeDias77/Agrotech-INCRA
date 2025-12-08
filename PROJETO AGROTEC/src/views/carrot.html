@@ -3,29 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AgroTec - Cenoura</title>
-    <!-- CSS correto -->
+    <title>AgroTech - Cenoura</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../public/assets/css/carrot.css">
 </head>
 <body>
+    
     <header class="header">
-        <div class="logo">
-            <img src="../public/assets/img/logo/incra.png" alt="INCRA Logo" class="logo-img">
+        <div class="header-content">
+            <a href="index.html" class="logo">
+                <img src="../public/assets/img/logo/incra.png" alt="AgroTech Logo">
+            </a>
+            <div class="search-bar">
+                <input type="text" placeholder="Pesquisar na AgroTech...">
+                <button>Pesquisar</button>
+            </div>
+
+            <nav class="user-nav">
+                <a href="categorias.html" class="nav-link">Cesta</a>
+                <a href="ofertas.html" class="nav-link">Sobre</a>
+                <a href="vendedores.html" class="nav-link">Vender</a>
+                <a href="ajuda.html" class="nav-link">Ajuda</a>
+            </nav>
+            
+            <div class="user-access">
+                <div class="perfil">
+                    <button id="perfil-btn" style="background: none; border: none; padding: 0;">
+                        <img src="../public/assets/img/perfil/Perfil1.png" alt="Perfil do Usuário" class="user-icon">
+                    </button>
+                </div>
+                
+                <div id="options" class="options-dropdown hidden">
+                    <a href="login.html" class="action-btn">Criar Conta</a>
+                    <a href="entrar.html" class="action-btn action-btn-alt">Entrar na Conta</a>
+                </div>
+            </div>
         </div>
-        <div class="search-bar">
-            <input type="text" placeholder="Pesquisar na AgroTec.com">
-        </div>
-        <div class="user-section">
-            <span>Olá Username</span>
-            <img src="../public/assets/img/perfil/Perfil1.png" alt="User" class="user-icon">
-        </div>
+        
     </header>
 
     <main class="main-content">
         <div class="product-section">
             <div class="product-gallery">
                 <div class="thumbnail-list">
-                    <img src="../public/assets/img/cenoura3].png" alt="Cenoura Thumbnail 1" class="thumbnail">
+                    <img src="../public/assets/img/cenoura3].png" alt="Cenoura Thumbnail 1" class="thumbnail active">
                     <img src="../public/assets/img/image1.png" alt="Cenoura Thumbnail 2" class="thumbnail">
                     <img src="../public/assets/img/image2.png" alt="Cenoura Thumbnail 3" class="thumbnail">
                     <img src="../public/assets/img/image3.png" alt="Cenoura Thumbnail 4" class="thumbnail">
@@ -45,6 +67,7 @@
                         <p class="price">R$ 24,90</p>
                         <p class="installments">em 12x R$ 2,08</p>
                         <span class="free-shipping">Frete Grátis</span>
+                        <a href="#" class="buy-button">Comprar</a>
                     </div>
                     <div class="product-card">
                         <img src="../public/assets/img/abobrinha2.jpg" alt="Abobrinha">
@@ -52,6 +75,7 @@
                         <p class="price">R$ 26,90</p>
                         <p class="installments">em 12x R$ 2,24</p>
                         <span class="free-shipping">Frete Grátis</span>
+                        <a href="#" class="buy-button">Comprar</a>
                     </div>
                     <div class="product-card">
                         <img src="../public/assets/img/abobora1.jpg" alt="Abóbora">
@@ -59,6 +83,7 @@
                         <p class="price">R$ 28,00</p>
                         <p class="installments">em 12x R$ 2,33</p>
                         <span class="free-shipping">Frete Grátis</span>
+                        <a href="#" class="buy-button">Comprar</a>
                     </div>
                 </div>
             </section>
@@ -72,6 +97,7 @@
                         <p class="price">R$ 22,90</p>
                         <p class="installments">em 12x R$ 1,91</p>
                         <span class="free-shipping">Frete Grátis</span>
+                        <a href="#" class="buy-button">Comprar</a>
                     </div>
                     <div class="product-card">
                         <img src="../public/assets/img/tomate2.jpeg" alt="Tomate">
@@ -79,6 +105,7 @@
                         <p class="price">R$ 27,90</p>
                         <p class="installments">em 12x R$ 2,33</p>
                         <span class="free-shipping">Frete Grátis</span>
+                        <a href="#" class="buy-button">Comprar</a>
                     </div>
                     <div class="product-card">
                         <img src="../public/assets/img/maca1.jpg" alt="Maçã">
@@ -86,13 +113,7 @@
                         <p class="price">R$ 25,90</p>
                         <p class="installments">em 12x R$ 2,16</p>
                         <span class="free-shipping">Frete Grátis</span>
-                    </div>
-                    <div class="product-card">
-                        <img src="../public/assets/img/jaca1.jpg" alt="Jaca">
-                        <h3>Jaca</h3>
-                        <p class="price">R$ 30,90</p>
-                        <p class="installments">em 12x R$ 2,58</p>
-                        <span class="free-shipping">Frete Grátis</span>
+                        <a href="#" class="buy-button">Comprar</a>
                     </div>
                 </div>
             </section>
@@ -170,7 +191,10 @@
         <button class="show-all-reviews">Mostrar todas as opiniões</button>
     </section>
 
-    <!-- JS correto -->
+    <footer class="footer">
+        <p>Desenvolvido por Felipe Dias, Pedro Neto, Endryo Matos e Felipe Madson &copy; 2025 AgroTech</p>
+    </footer>
+
     <script src="../public/assets/js/javinha.js"></script>
     <script src="../public/assets/js/pagamento.js"></script>
 </body>

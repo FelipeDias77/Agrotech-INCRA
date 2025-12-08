@@ -1,66 +1,68 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <title>Insira o código - INCRA</title>
-  <link rel="stylesheet" href="../public/assets/css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificação de Código - AgroTech</title>
+    <link rel="stylesheet" href="../public/assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <!-- Botão voltar fixo -->
-  <a href="entrar.html" class="back-button">Voltar</a>
 
-  <!-- Header -->
-  <header class="header">
-    <a href="https://www.gov.br/incra/pt-br" class="icon-btn">
-      <img src="../public/assets/img/logo/incra.png" alt="Incra">
-      <span class="icon-text" id="typed-text"></span>
-    </a>
-    <div class="search-bar">
-      <input type="text" placeholder="Pesquisar na AgroTech...">
-      <button>Pesquisar</button>
-    </div>
+    <header class="header">
+        <a href="index.html" class="logo">
+            <img src="../public/assets/img/logo/incra.png" alt="AgroTech Logo">
+        </a>
 
-    <div class="user">
-      <div class="perfil">
-        <button id="perfil-btn">
-          <img src="../public/assets/img/perfil/Perfil1.png" alt="Perfil">
-        </button>
-      </div>
-      <div id="options" class="hidden">
-        <a href="entrar.html" class="action-btn">Criar Conta</a>
-        <a href="entrar.html" class="action-btn">Entrar na Conta</a>
-      </div>
-      <div class="menu">
-        <a href="#">Cesta</a>
-        <a href="#">Minha Conta</a>
-        <a href="#">Ajuda</a>
-        <a href="#">Sobre</a>
-      </div>
-      <!-- Botão lateral -->
-      <img id="toggleButton" src="../public/assets/img/icons/n.png" alt="Abrir/Fechar Barra" />
-    </div>
-  </header>
+        <div class="search-bar">
+            <input type="text" placeholder="Pesquisar na AgroTech...">
+            <button>Pesquisar</button>
+        </div>
 
-  <!-- Main -->
-  <div class="main-box">
-    <h2>Insira o código que te enviamos por *****</h2>
-    <p class="email">joaodasilva@gmail.com</p>
-    <a href="#" class="link-trocar">Trocar de conta</a>
+        <nav class="user-nav">
+            <a href="#">Cesta</a>
+            <a href="#">Minha Conta</a>
+            <a href="#">Ajuda</a>
+            <a href="#">Sobre</a>
+        </nav>
+        
+        <div class="user-access">
+            <a href="entrar.html" class="action-btn">Entrar</a>
+            <a href="entrar.html" class="action-btn action-btn-alt">Criar Conta</a>
+        </div>
+    </header>
 
-    <form action="verificar_codigo.php" method="POST">
-      <input type="text" name="codigo" maxlength="6" placeholder="Digite o código" class="input-codigo" required>
-      <div class="botoes-codigo">
-        <button type="submit" class="confirmar">Confirmar</button>
-        <a href="index.html" class="voltar">Voltar</a>
-      </div>
-    </form>
-  </div>
+    <main class="auth-container">
+        <div class="verification-box">
+            <h2>Quase lá! Insira o código de 6 dígitos</h2>
 
-  <!-- Footer -->
-  <footer class="footer">
-    <p>Desenvolvido por Felipe Dias, Pedro Neto, Endryo Matos e Felipe Madson © 2025 AgroTech</p>
-  </footer>
+            <p class="verification-info">
+                Enviamos um código de verificação para o e-mail:
+                <br>
+                <strong>joaodasilva@gmail.com</strong>
+            </p>
+            <a href="#" class="link-trocar">Trocar de conta</a>
 
-  <script src="../public/assets/js/javinha.js"></script>
+            <form action="verificar_codigo.php" method="POST">
+                <input type="text" name="codigo" maxlength="6" pattern="\d{6}" placeholder="------" class="input-codigo" required>
+
+                <div class="resend-info">
+                    <p>Não recebeu o código? <a href="#">Reenviar</a></p>
+                </div>
+
+                <div class="botoes-codigo">
+                    <button type="submit" class="btn-confirmar">Confirmar</button>
+                    <a href="entrar.html" class="btn-voltar">Voltar</a>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>Desenvolvido por Felipe Dias, Pedro Neto, Endryo Matos e Felipe Madson &copy; 2025 AgroTech</p>
+    </footer>
+
+    <script src="../public/assets/js/scripts.js"></script>
+
 </body>
 </html>
