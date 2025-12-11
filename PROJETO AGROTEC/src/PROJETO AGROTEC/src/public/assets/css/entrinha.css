@@ -1,0 +1,168 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Container principal - Ajustado para ser mais compacto */
+.container {
+    display: flex;
+    width: 90%;
+    max-width: 650px; /* Reduzido para um visual mais denso */
+    padding: 30px; /* Reduzido o padding */
+    background: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* Coluna da Logo - Ajustado para centralizar e manter o espaçamento */
+.left {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 20px; /* Espaço entre logo e form */
+    margin-left: 0; /* Correção */
+    border-right: 1px solid #eee; /* Divisória sutil */
+}
+
+.logo img {
+    max-width: 90%;
+    height: auto;
+}
+
+/* Coluna do Formulário - Ajustado para preencher o espaço */
+.right {
+    flex: 1;
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 0; /* Correção */
+}
+
+/* Estilos de input permanecem */
+.login-form label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: bold;
+}
+
+.login-form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* --- Botões de Ação (ENTRAR e GOV.BR) --- */
+
+/* Contêiner genérico dos botões (para alinhar) */
+.containex {
+    margin-top: 10px;
+}
+
+/* 1. Botão Principal (ENTRAR) */
+.btn-primary-submit {
+    width: 100%;
+    padding: 12px 20px;
+    margin-bottom: 10px;
+    border: none;
+    background: #5a8f45; /* Seu verde principal */
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 6px; 
+    transition: background-color 0.3s, transform 0.1s;
+}
+
+.btn-primary-submit:hover {
+    background: #4a7538;
+    transform: translateY(-1px);
+}
+
+/* 2. Botão Secundário (GOV.BR) */
+.btn-link-action {
+    display: block;
+    width: 100%;
+    padding: 12px 0;
+    background-color: var(--color-background-box);
+    border: 2px solid #005f73; /* Cor institucional GOV.BR */
+    border-radius: 6px;
+    color: #005f73;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.1s;
+    text-decoration: none;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.btn-link-action:hover {
+    background-color: #f0f8ff;
+    transform: translateY(-1px);
+}
+
+
+/* Mensagens de Status PHP */
+.status-message {
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 4px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+.success {
+    background-color: #e6ffe6;
+    color: #4a7538;
+    border: 1px solid #4a7538;
+}
+.error {
+    background-color: #ffe6e6;
+    color: #c62828;
+    border: 1px solid #c62828;
+}
+
+/* Link Esqueceu a senha? */
+.link {
+    display: block;
+    margin-top: 10px;
+    text-decoration: none;
+    color: #4CAF50;
+    font-size: 14px;
+    text-align: center;
+}
+
+.link:hover {
+    text-decoration: underline;
+}
+
+/* Media Queries (Responsividade) */
+@media (max-width: 600px) {
+    .container {
+        flex-direction: column;
+        max-width: 400px;
+        padding: 30px;
+    }
+    
+    .left {
+        padding-right: 0;
+        margin-bottom: 20px;
+        border-right: none;
+        border-bottom: 1px solid #eee; /* Adiciona divisória horizontal */
+    }
+}

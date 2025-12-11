@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AgroTech - Carrinho</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <!-- CSS global -->
+  <link rel="stylesheet" href="../public/assets/css/carrot.css">
+  <!-- CSS específico do carrinho -->
+  <link rel="stylesheet" href="../public/assets/css/cesta.css">
+  
+</head>
+<body>
+  <header class="header">
+    <div class="header-content">
+      <a href="index.html" class="logo">
+        <img src="../public/assets/img/logo/incra.png" alt="AgroTech Logo">
+      </a>
+      <div class="search-bar">
+        <input type="text" placeholder="Pesquisar na AgroTech...">
+        <button>Pesquisar</button>
+      </div>
+      <nav class="user-nav">
+        <a href="carrinho.html" class="nav-link">
+          Cesta <span id="cart-badge" class="badge-count">1</span>
+        </a>
+        <a href="ofertas.html" class="nav-link">Sobre</a>
+        <a href="vendedores.html" class="nav-link">Vender</a>
+        <a href="ajuda.html" class="nav-link">Ajuda</a>
+        
+      </nav>
+    </div>
+  </header>
+
+
+  <main class="main-content">
+    <section class="cart card">
+      <div class="cart-header">
+        <h2 class="cart-title">Seu carrinho</h2>
+        <!-- Botão para adicionar mais produtos -->
+        <div class="add-product">
+          <a href="index.html" class="btn-primary">Adicionar mais produtos</a>
+        
+        </div>
+      </div>
+
+      <div class="cart-items" id="cart-items">
+        <article class="cart-item">
+          <div class="thumb"><img src="../public/assets/img/cenoura3].png" alt="Cenoura"></div>
+          <div class="item-info">
+            <h3 class="item-title">Cenoura orgânica (1kg)</h3>
+            <p class="item-meta">Vendido por José Anchieta</p>
+            <button class="item-remove">Remover</button>
+          </div>
+          <div class="item-actions">
+            <div class="qty">
+              <button class="btn-qty">−</button>
+              <input type="number" value="1" min="1">
+              <button class="btn-qty">+</button>
+            </div>
+            <div class="price">R$ 29,90</div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <aside class="summary card">
+      <h2>Resumo</h2>
+      <div class="row"><span>Subtotal</span><span id="subtotal">R$ 29,90</span></div>
+      <div class="row"><span>Frete</span><span>R$ 0,00</span></div>
+      <div class="row"><span>Descontos</span><span>− R$ 0,00</span></div>
+      <div class="total"><span>Total</span><span id="total">R$ 29,90</span></div>
+
+      <div class="checkout">
+        <button class="btn-primary">Finalizar compra</button>
+        <button class="btn-secondary" onclick="abrirPopup()">Continuar comprando</button>
+        <div class="back-action">
+      <a href="index.html" class="btn-back-footer">← Voltar</a>
+    </div>
+      </div>
+      
+    </aside>
+  </main>
+
+  <!-- Botão de voltar no rodapé -->
+   
+  
+  <!-- POPUP -->
+  <div id="popup" class="popup-overlay">
+    <div class="popup-box">
+      <h3>Itens no carrinho</h3>
+      <p>Você já adicionou produtos ao carrinho. Deseja voltar para a página inicial?</p>
+      <div class="popup-actions">
+        <button onclick="voltarHome()" class="btn-primary">Sim, voltar</button>
+        <button onclick="fecharPopup()" class="btn-secondary">Continuar aqui</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- JS separado -->
+  <script src="../public/assets/js/cesta.js"></script>
+ 
+
+</body>
+</html>

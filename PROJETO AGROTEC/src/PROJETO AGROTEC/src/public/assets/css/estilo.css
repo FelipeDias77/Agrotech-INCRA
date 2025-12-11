@@ -1,0 +1,565 @@
+/* RESET - Mantido */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', Arial, sans-serif; 
+    scroll-behavior: smooth;
+}
+
+/* Variáveis CSS para consistência visual */
+:root {
+    --color-primary: #6AAC3D; /* Verde principal da AgroTech */
+    --color-secondary: #4CAF50; /* Verde de destaque / Ação */
+    --color-text-dark: #333333;
+    --color-text-light: #ffffff;
+    --color-background-page: #f5f5f5;
+    --color-background-box: #ffffff;
+    --color-border-input: #cccccc;
+    --color-hover-gray: #e9e9e9;
+    --shadow-main: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+body {
+    background-color: var(--color-background-page); 
+    min-height: 100vh; 
+    display: flex;
+    flex-direction: column; 
+    color: var(--color-text-dark); 
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-text-dark);
+}
+
+button {
+    border: none;
+    cursor: pointer;
+}
+
+/* ==================================
+        HEADER (Modernizado, Fixo e Centralizado)
+==================================
+*/
+.header {
+    background-color: var(--color-primary); 
+    padding: 0 2rem; /* Removido padding vertical para ser definido no header-content */
+    color: var(--color-text-light);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+    position: fixed; /* FIXADO */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+/* Novo contêiner para centralizar o conteúdo do Header */
+.header-content {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem; 
+    width: 100%;
+    max-width: 1200px; /* Limite de largura para desktop */
+    margin: 0 auto; /* Centraliza o contêiner */
+    padding: 1rem 0; /* Adiciona o padding vertical que estava no .header */
+}
+
+.header .logo img {
+    height: 50px; 
+    transition: transform 0.3s ease;
+}
+
+.search-bar {
+    display: flex;
+    flex-grow: 1;
+    max-width: 700px; /* Ajustado de 600px para 700px, conforme o seu feedback de "tamanho bom" */
+}
+
+.search-bar input {
+    width: 100%;
+    padding: 10px 16px; 
+    border: 2px solid var(--color-primary); 
+    border-right: none;
+    border-radius: 8px 0 0 8px; 
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.search-bar input:focus {
+    border-color: var(--color-secondary); 
+}
+
+.search-bar button {
+    background-color: var(--color-secondary); 
+    color: var(--color-text-light);
+    padding: 10px 15px;
+    border-radius: 0 8px 8px 0; 
+    font-weight: 600;
+    transition: background-color 0.3s;
+    flex-shrink: 0; 
+}
+
+/* Navegação Principal e Acesso */
+.user-nav {
+    display: flex;
+    gap: 1.5rem; 
+    /* margin-right: 2rem; (Removido, a margem de centralização no header-content já controla) */
+}
+
+.user-nav a {
+    color: var(--color-text-light);
+    text-decoration: none;
+    font-size: 1rem;
+    position: relative;
+    transition: opacity 0.2s;
+}
+
+.user-nav a:hover {
+    opacity: 0.8;
+}
+
+.user-access {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    position: relative;
+    /* Ajuste para que o .user-access ocupe o espaço restante */
+    margin-left: auto;
+}
+
+.perfil button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    border-radius: 50%;
+    padding: 0;
+    z-index: 1001; 
+}
+
+.perfil img {
+    width: 45px; 
+    height: 45px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--color-text-light);
+    transition: transform 0.3s ease;
+}
+
+.perfil button:hover img {
+    transform: scale(1.05);
+}
+
+/* Dropdown */
+.options-dropdown {
+    position: absolute;
+    top: 60px; 
+    right: 0;
+    background: var(--color-background-box);
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: var(--shadow-main);
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    z-index: 999;
+}
+
+.options-dropdown.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.options-dropdown .action-btn {
+    padding: 8px 15px;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-align: center;
+    color: var(--color-text-dark);
+    background-color: var(--color-hover-gray);
+    transition: background-color 0.2s;
+}
+
+.options-dropdown .action-btn-alt {
+    background-color: var(--color-secondary); 
+    color: var(--color-text-light);
+}
+
+.options-dropdown .action-btn:hover {
+    background-color: #ddd;
+}
+
+.options-dropdown .action-btn-alt:hover {
+    background-color: #45a049;
+}
+
+
+/* BARRA LATERAL (Sidebar) */
+.menu {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-background-box);
+    width: 250px; 
+    padding: 20px;
+    position: fixed;
+    height: 100%;
+    top: 0;
+    left: -250px; /* Oculto */
+    transition: left 0.3s ease;
+    z-index: 990; 
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.menu a {
+    font-size: 1rem;
+    border-radius: 6px;
+    text-decoration: none;
+    padding: 12px 20px;
+    color: var(--color-text-light);
+    background: var(--color-primary);
+    margin: 8px 0;
+    font-weight: 600;
+    width: 100%;
+    transition: background 0.3s ease, transform 0.3s ease;
+    text-align: left;
+}
+
+.menu a:hover {
+    background: var(--color-secondary);
+    transform: translateX(5px);
+}
+
+.toggle-sidebar {
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    position: absolute; 
+    display: none; 
+}
+
+
+/* ==================================
+        MAIN CONTENT
+==================================
+*/
+.main-content {
+    margin-top: 70px; 
+}
+
+/* ==================================
+        CAROUSEL
+==================================
+*/
+.carousel {
+    position: relative;
+    height: 400px; 
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+
+.carousel__viewport {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    overflow: hidden;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+}
+
+.carousel__slide {
+    flex: 0 0 100%;
+    width: 100%;
+    height: 100%;
+    scroll-snap-align: center;
+}
+
+.carousel__slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Estilos de controle do carousel (navegação < >) - OCULTOS */
+.carousel__prev, .carousel__next {
+    display: none !important; 
+    /* Esta regra oculta os botões, mas a remoção no HTML é a forma mais limpa */
+}
+
+
+/* ==================================
+        INFO CARDS (list-card) - RETANGULAR VERTICAL
+==================================
+*/
+.list-card {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.card-container {
+    background-color: var(--color-background-box);
+    border-radius: 10px;
+    width: 220px; 
+    min-height: 280px; /* Define a altura para um formato retangular vertical */
+    text-align: center;
+    padding: 25px 15px; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: var(--shadow-main);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between; /* Mantém o botão no fundo do card */
+}
+
+.card-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.card-container img {
+    width: 60px; 
+    height: 60px;
+    object-fit: contain;
+    margin-bottom: 15px;
+    border: none; 
+}
+
+.card-container h3 {
+    margin-bottom: 15px;
+    font-size: 1.15rem;
+    font-weight: 600;
+}
+
+.btn-secondary {
+    padding: 10px 20px;
+    background-color: var(--color-secondary);
+    color: var(--color-text-light);
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: background-color 0.3s;
+    width: 100%;
+}
+
+.btn-secondary:hover {
+    background-color: #45a049;
+}
+
+
+/* ==================================
+        PRODUTOS
+==================================
+*/
+.products-section {
+    padding: 40px 20px;
+}
+
+.products-section h2 {
+    margin-bottom: 30px;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--color-primary);
+}
+
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px; 
+    justify-content: center;
+}
+
+.product-card {
+    background-color: var(--color-background-box);
+    border-radius: 10px;
+    width: 260px; 
+    text-align: center;
+    padding: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: var(--shadow-main);
+    overflow: hidden;
+}
+
+.product-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.product-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.product-card h3 {
+    margin: 10px 0;
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.product-card .price {
+    margin-bottom: 15px;
+    font-weight: 700;
+    color: var(--color-secondary); 
+    font-size: 1.8rem;
+}
+
+.btn-buy {
+    /* Usado no HTML corrigido para links de compra */
+    display: block;
+    padding: 10px 15px;
+    background-color: var(--color-primary);
+    color: var(--color-text-light);
+    border-radius: 6px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    transition: background-color 0.3s, transform 0.1s;
+}
+
+.btn-buy:hover {
+    background-color: #507d39;
+}
+
+
+/* ==================================
+          FOOTER
+==================================
+*/
+.footer {
+    background-color: var(--color-primary);
+    color: var(--color-text-light);
+    text-align: center;
+    padding: 20px; 
+    font-size: 0.9rem;
+    width: 100%;
+    margin-top: auto; 
+}
+
+
+/* ==================================
+        RESPONSIVIDADE GERAL
+==================================
+*/
+@media (max-width: 1200px) {
+    /* Ajustes para o contêiner centralizado */
+    .header-content {
+        padding: 1rem;
+        gap: 1rem;
+        max-width: 100%; /* Permite que o conteúdo ocupe a largura total - 2rem de padding do .header */
+    }
+}
+
+@media (max-width: 992px) {
+    .user-nav {
+        display: none;
+    }
+
+    .toggle-sidebar {
+        display: block; 
+        position: static; 
+    }
+
+    .header-content {
+        flex-wrap: wrap;
+        padding: 1rem;
+    }
+
+    .search-bar {
+        order: 3; 
+        max-width: 100%;
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .user-access {
+        margin-left: 0; /* Desabilita o auto margin para melhor controle */
+    }
+}
+
+@media (max-width: 768px) {
+    .main-content {
+        margin-top: 120px; 
+    }
+
+    .carousel {
+        height: 300px;
+    }
+
+    .list-card {
+        gap: 15px;
+    }
+
+    .card-container {
+        width: 45%; 
+        min-height: 250px; /* Ajuste responsivo */
+    }
+
+    .products-section h2 {
+        font-size: 1.6rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .header {
+        padding: 0; /* O header-content lida com o padding */
+    }
+
+    .header-content {
+        padding: 0.8rem 1rem;
+    }
+
+    .header .logo img {
+        height: 40px;
+    }
+
+    .perfil img {
+        width: 35px;
+        height: 35px;
+    }
+    
+    .list-card {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .card-container {
+        width: 90%; 
+        max-width: 300px;
+        min-height: 200px; /* Ajuste responsivo para mobile */
+    }
+
+    .product-list {
+        gap: 20px;
+    }
+
+    .product-card {
+        width: 90%;
+        max-width: 300px;
+    }
+
+    .product-card .price {
+        font-size: 1.5rem;
+    }
+
+    .btn-buy {
+        font-size: 1rem;
+    }
+
+    .carousel {
+        height: 200px;
+    }
+}

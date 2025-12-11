@@ -1,0 +1,181 @@
+/* ===========================
+   Estilo do carrinho e popup
+   =========================== */
+
+
+/* Header compacto */
+.header {
+  background: var(--color-primary);
+  color: var(--color-text-light);
+  padding: 0.5rem 1rem; /* altura menor */
+  position: relative;   /* não sobrepõe o conteúdo */
+}
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Dá espaço abaixo do header */
+.main-content {
+  margin-top: 16px;
+}
+
+/* Título do carrinho */
+.cart-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin: 8px 0; /* espaço acima e abaixo */
+}
+
+/* Botão de adicionar produto */
+.add-product {
+  margin-top: 6px;
+  text-align: left;
+}
+.add-product .btn-primary {
+  background: var(--color-secondary);
+  color: var(--color-text-light);
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-decoration: none;
+}
+.add-product .btn-primary:hover { background: #45a049; }
+
+/* Itens do carrinho */
+.cart-items { display: flex; flex-direction: column; gap: 12px; }
+.cart-item {
+  display: grid;
+  grid-template-columns: 84px 1fr 140px;
+  gap: 14px;
+  padding: 12px;
+  border-radius: 8px;
+  background: #fff;
+  transition: background .2s ease;
+}
+.cart-item:hover { background: var(--color-hover-gray); }
+.thumb img { width: 100%; height: 84px; object-fit: cover; border-radius: 8px; }
+.item-title { font-weight: 600; }
+.item-meta { font-size: .9rem; color: #666; }
+.item-remove {
+  background: #fff; border: 1px solid #ddd; color: #c62828;
+  padding: 6px 10px; border-radius: 6px; font-weight: 600; cursor: pointer;
+}
+.item-actions { display: flex; flex-direction: column; align-items: flex-end; gap: 10px; }
+.qty { display: flex; align-items: center; gap: 8px; }
+.btn-qty {
+  width: 32px; height: 32px; border-radius: 8px;
+  border: 1px solid var(--color-border-input); background: #fff;
+  font-weight: 700; cursor: pointer;
+}
+.qty input {
+  width: 56px; text-align: center; border: 1px solid var(--color-border-input);
+  border-radius: 8px; padding: 6px;
+}
+.price { font-weight: 700; color: var(--color-secondary); font-size: 1rem; }
+
+/* Resumo */
+.summary {
+  background: #f9f9f9;
+  border: 1px solid var(--color-border-input);
+  border-radius: 12px;
+  box-shadow: var(--shadow-main);
+  padding: 1.5rem;
+}
+.summary h2 { text-align: center; color: var(--color-primary); margin-bottom: 12px; }
+.row { display: flex; justify-content: space-between; padding: 6px 0; border-bottom: 1px dashed #ddd; }
+.total {
+  display: flex; justify-content: space-between;
+  margin-top: 12px; padding-top: 12px;
+  border-top: 2px solid #ccc;
+  font-weight: 800; font-size: 1.2rem; color: var(--color-secondary);
+}
+
+/* Checkout buttons */
+.checkout {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 1rem;
+}
+.btn-primary {
+  background: var(--color-secondary);
+  color: var(--color-text-light);
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  font-weight: 700;
+  cursor: pointer;
+}
+.btn-secondary {
+  background: #fff;
+  border: 1px solid var(--color-border-input);
+  padding: 12px;
+  border-radius: 8px;
+  font-weight: 700;
+  color: var(--color-primary);
+  cursor: pointer;
+}
+
+/* Botão reposicionado dentro do conteúdo */
+.back-action {
+  text-align: left;
+  margin: 12px 0;
+}
+.btn-back-footer {
+  display: inline-block;
+  background: var(--color-secondary);
+  color: var(--color-text-light);
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  text-decoration: none;
+}
+.btn-back-footer:hover { background: #45a049; }
+
+/* Créditos no rodapé com faixa verde */
+.footer-credits {
+  background: var(--color-primary);
+  color: var(--color-text-light);
+  text-align: center;
+  padding: 16px 12px;
+  margin-top: 40px;
+}
+.footer-credits p {
+  margin: 0;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+/* Popup */
+.popup-overlay {
+  position: fixed;
+  top:0; left:0; width:100%; height:100%;
+  background: rgba(0,0,0,0.5);
+  display: none;
+  align-items: center; justify-content: center;
+  z-index: 9999;
+}
+.popup-box {
+  background: var(--color-background-box);
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 400px;
+}
+
+/* Badge de quantidade no carrinho */
+.badge-count {
+  background: var(--color-secondary);
+  color: var(--color-text-light);
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 2px 6px;
+  border-radius: 50%;
+  margin-left: 6px;
+}

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgroTech | Seu E-commerce Agrícola</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../public/assets/css/estilo.css">
+</head>
+<body>
+    
+    <header class="header">
+        <div class="header-content">
+            <a href="index.html" class="logo">
+                <img src="../public/assets/img/logo/incra.png" alt="AgroTech Logo">
+            </a>
+            <div class="search-bar">
+                <input type="text" placeholder="Pesquisar na AgroTech...">
+                <button>Pesquisar</button>
+            </div>
+
+            <nav class="user-nav">
+                <a href="#">Cesta</a>
+                <a href="#">Minha Conta</a>
+                <a href="#">Ajuda</a>
+                <a href="#">Sobre</a>
+            </nav>
+            
+            <div class="user-access">
+                <div class="perfil">
+                    <button id="perfil-btn">
+                        <img src="../public/assets/img/perfil/Perfil1.png" alt="Perfil do Usuário">
+                    </button>
+                </div>
+                
+                <div id="options" class="options-dropdown hidden">
+                    <a href="login.html" class="action-btn">Criar Conta</a>
+                    <a href="entrar.html" class="action-btn action-btn-alt">Entrar na Conta</a>
+                </div>
+                
+                <img id="toggleButton" src="../public/assets/img/icons/next.png" alt="Abrir/Fechar Barra" class="toggle-sidebar" />
+            </div>
+        </div>
+        
+    </header>
+
+    <nav class="menu">
+        <a href="#">Cesta</a>
+        <a href="#">Minha Conta</a>
+        <a href="#">Ajuda</a>
+        <a href="#">Sobre</a>
+    </nav>
+
+    <main class="main-content"> 
+        
+        <section class="carousel" aria-label="Gallery">
+            <ol class="carousel__viewport">
+                <li id="carousel__slide1" class="carousel__slide">
+                    <div class="carousel__snapper">
+                        <img src="../public/assets/img/coisa1.jpeg" alt="Banner: Oferta de Produtos Frescos">
+                    </div>
+                    </li>
+                <li id="carousel__slide2" class="carousel__slide">
+                    <div class="carousel__snapper">
+                        <img src="../public/assets/img/coisa2.jpg" alt="Banner: Descrição da imagem 2">
+                    </div>
+                    </li>
+                <li id="carousel__slide3" class="carousel__slide">
+                    <div class="carousel__snapper">
+                        <img src="../public/assets/img/coisa3.jpg" alt="Banner: Descrição da imagem 3">
+                    </div>
+                    </li>
+            </ol>
+        </section>
+        
+        <section class="info-cards-section">
+            <div class="list-card">
+                <div class="card-container">
+                    <img src="../public/assets/img/icons/encomenda.png" alt="Retire sua Encomenda">
+                    <h3>Resgate a Encomenda</h3>
+                    <button class="btn-secondary">Mostrar</button>
+                </div>
+                <div class="card-container">
+                    <img src="../public/assets/img/icons/local.png" alt="Ponto de Retirada">
+                    <h3>Ponto de Retirada</h3>
+                    <button class="btn-secondary">Mostrar</button>
+                </div>
+                <div class="card-container">
+                    <img src="../public/assets/img/icons/mais-vendidos.png" alt="Produtos Mais Vendidos">
+                    <h3>Mais Vendidos</h3>
+                    <button class="btn-secondary">Mostrar</button>
+                </div>
+                <div class="card-container">
+                    <img src="../public/assets/img/icons/pagamento.png" alt="Meios de Pagamento">
+                    <h3>Meios de Pagamento</h3>
+                    <button class="btn-secondary">Mostrar</button>
+                </div>
+            </div>
+        </section>
+    
+        <section class="products-section">
+            <h2>Mais indicados para você</h2>
+            <div class="product-list">
+                <div class="product-card">
+                    <img src="../public/assets/img/cenoura3].png" alt="Cenoura">
+                    <h3>Cenoura</h3>
+                    <p class="price">R$ 29,90</p>
+                    <a href="carrot.html" class="btn-buy">Comprar</a>
+                </div>
+                <div class="product-card">
+                    <img src="../public/assets/img/pimenta2.png" alt="Pimenta">
+                    <h3>Pimenta</h3>
+                    <p class="price">R$ 39,90</p>
+                    <a href="carrot.html" class="btn-buy">Comprar</a>
+                </div>
+                <div class="product-card">
+                    <img src="../public/assets/img/alface2.png" alt="Alface">
+                    <h3>Alface</h3>
+                    <p class="price">R$ 29,90</p>
+                    <a href="#" class="btn-buy">Comprar</a>
+                </div>
+                <div class="product-card">
+                    <img src="../public/assets/img/tomate.png" alt="Tomate">
+                    <h3>Tomate</h3>
+                    <p class="price">R$ 29,90</p>
+                    <a href="#" class="btn-buy">Comprar</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>Desenvolvido por Felipe Dias, Pedro Neto, Endryo Matos e Felipe Madson &copy; 2025 AgroTech</p>
+    </footer>
+    <script src="../public/assets/js/javinha.js"></script>
+</body>
+</html>

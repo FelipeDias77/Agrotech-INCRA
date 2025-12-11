@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgroTech - Cenoura</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../public/assets/css/carrot.css">
+</head>
+<body>
+    
+    <header class="header">
+        <div class="header-content">
+            <a href="index.html" class="logo">
+                <img src="../public/assets/img/logo/incra.png" alt="AgroTech Logo">
+            </a>
+            <div class="search-bar">
+                <input type="text" placeholder="Pesquisar na AgroTech...">
+                <button>Pesquisar</button>
+            </div>
+
+            <nav class="user-nav">
+                <a href="categorias.html" class="nav-link">Cesta</a>
+                <a href="ofertas.html" class="nav-link">Sobre</a>
+                <a href="vendedores.html" class="nav-link">Vender</a>
+                <a href="ajuda.html" class="nav-link">Ajuda</a>
+            </nav>
+            
+            <div class="user-access">
+                <div class="perfil">
+                    <button id="perfil-btn" style="background: none; border: none; padding: 0;">
+                        <img src="../public/assets/img/perfil/Perfil1.png" alt="Perfil do Usuário" class="user-icon">
+                    </button>
+                </div>
+                
+                <div id="options" class="options-dropdown hidden">
+                    <a href="login.html" class="action-btn">Criar Conta</a>
+                    <a href="entrar.html" class="action-btn action-btn-alt">Entrar na Conta</a>
+                </div>
+            </div>
+        </div>
+        
+    </header>
+
+    <main class="main-content">
+        <div class="product-section">
+            <div class="product-gallery">
+                <div class="thumbnail-list">
+                    <img src="../public/assets/img/cenoura3].png" alt="Cenoura Thumbnail 1" class="thumbnail active">
+                    <img src="../public/assets/img/image1.png" alt="Cenoura Thumbnail 2" class="thumbnail">
+                    <img src="../public/assets/img/image2.png" alt="Cenoura Thumbnail 3" class="thumbnail">
+                    <img src="../public/assets/img/image3.png" alt="Cenoura Thumbnail 4" class="thumbnail">
+                    <img src="../public/assets/img/image4.png" alt="Cenoura Thumbnail 5" class="thumbnail">
+                </div>
+                <div class="main-image">
+                    <img src="../public/assets/img/cenoura3].png" alt="Cenoura Principal" id="mainImage">
+                </div>
+            </div>
+
+            <section class="related-products">
+                <h2>Produtos Relacionados</h2>
+                <div class="product-grid">
+                    <div class="product-card">
+                        <img src="../public/assets/img/BATATA.png" alt="Batata">
+                        <h3>Batata</h3>
+                        <p class="price">R$ 24,90</p>
+                        <p class="installments">em 12x R$ 2,08</p>
+                        <span class="free-shipping">Frete Grátis</span>
+                        <a href="#" class="buy-button">Comprar</a>
+                    </div>
+                    <div class="product-card">
+                        <img src="../public/assets/img/abobrinha2.jpg" alt="Abobrinha">
+                        <h3>Abobrinha</h3>
+                        <p class="price">R$ 26,90</p>
+                        <p class="installments">em 12x R$ 2,24</p>
+                        <span class="free-shipping">Frete Grátis</span>
+                        <a href="#" class="buy-button">Comprar</a>
+                    </div>
+                    <div class="product-card">
+                        <img src="../public/assets/img/abobora1.jpg" alt="Abóbora">
+                        <h3>Abóbora</h3>
+                        <p class="price">R$ 28,00</p>
+                        <p class="installments">em 12x R$ 2,33</p>
+                        <span class="free-shipping">Frete Grátis</span>
+                        <a href="#" class="buy-button">Comprar</a>
+                    </div>
+                </div>
+            </section>
+
+            <section class="seller-products">
+                <h2>Produtos do vendedor</h2>
+                <div class="product-grid">
+                    <div class="product-card">
+                        <img src="../public/assets/img/melao1.jpg" alt="Melão">
+                        <h3>Melão</h3>
+                        <p class="price">R$ 22,90</p>
+                        <p class="installments">em 12x R$ 1,91</p>
+                        <span class="free-shipping">Frete Grátis</span>
+                        <a href="#" class="buy-button">Comprar</a>
+                    </div>
+                    <div class="product-card">
+                        <img src="../public/assets/img/tomate2.jpeg" alt="Tomate">
+                        <h3>Tomate</h3>
+                        <p class="price">R$ 27,90</p>
+                        <p class="installments">em 12x R$ 2,33</p>
+                        <span class="free-shipping">Frete Grátis</span>
+                        <a href="#" class="buy-button">Comprar</a>
+                    </div>
+                    <div class="product-card">
+                        <img src="../public/assets/img/maca1.jpg" alt="Maçã">
+                        <h3>Maçã</h3>
+                        <p class="price">R$ 25,90</p>
+                        <p class="installments">em 12x R$ 2,16</p>
+                        <span class="free-shipping">Frete Grátis</span>
+                        <a href="#" class="buy-button">Comprar</a>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <aside class="product-info">
+            <span class="badge new">Novo</span>
+            <span class="badge bestseller">Mais vendido</span>
+            <h1>Cenoura</h1>
+            <div class="rating">
+                <div class="stars">★★★★★</div>
+                <span class="rating-value">4,5</span>
+                <span class="reviews">(3.033 avaliações)</span>
+            </div>
+            <div class="price-container">
+                <p class="price">R$ 29,90</p>
+                <p class="installments">em 12x R$ 2,49</p>
+            </div>
+            <div class="delivery-info">
+                <p>Chegará grátis amanhã</p>
+                <p>Mais formas de entrega</p>
+                <p>Retire grátis a partir de amanhã</p>
+                <a href="#" class="map-link">Ver no mapa</a>
+            </div>
+            <div class="return-info">
+                <p>Devolução grátis</p>
+                <a href="#" class="learn-more">Saiba Mais</a>
+            </div>
+            <div class="stock-info">
+                <p>Estoque: 86</p>
+            </div>
+            <button class="buy-button" id="pagar-mercadopago">Comprar Agora</button>
+            <button class="cart-button">Adicionar ao Carrinho</button>
+            <div class="seller-info">
+                <p>Vendido por José Anchieta</p>
+                <div class="warranty">
+                    <span class="warranty-icon">⚡</span>
+                    <p>90 dias de garantia</p>
+                </div>
+            </div>
+        </aside>
+    </main>
+
+    <section class="reviews-section">
+        <h2>Opiniões do Produto</h2>
+        <div class="rating-summary">
+            <div class="rating-average">
+                <span class="rating-number">4,5</span>
+                <div class="stars">★★★★★</div>
+                <span class="total-reviews">3.033 Avaliações</span>
+            </div>
+            <div class="rating-bars">
+                <div class="rating-bar">
+                    <span>5★</span>
+                    <div class="bar-bg"><div class="bar-fill" style="width: 80%"></div></div>
+                </div>
+            </div>
+        </div>
+        <div class="reviews-photos">
+            <h3>Opiniões com fotos</h3>
+            <div class="photos-grid">
+                <img src="../public/assets/img/cenouraComment.png" alt="Review photo 1">
+                <img src="../public/assets/img/cenouraComment.png" alt="Review photo 2">
+                <img src="../public/assets/img/cenouraComment.png" alt="Review photo 3">
+            </div>
+        </div>
+        <div class="featured-reviews">
+            <h3>Opiniões em destaque</h3>
+            <div class="review-card">
+                <div class="stars">★★★★★</div>
+                <p class="review-text">Blá blá blá blá, blá blá blá, blá blá blá, blá blá blá, blá blá blá!</p>
+                <button class="util-button">É útil?</button>
+            </div>
+        </div>
+        <button class="show-all-reviews">Mostrar todas as opiniões</button>
+    </section>
+
+    <footer class="footer">
+        <p>Desenvolvido por Felipe Dias, Pedro Neto, Endryo Matos e Felipe Madson &copy; 2025 AgroTech</p>
+    </footer>
+
+    <script src="../public/assets/js/javinha.js"></script>
+    <script src="../public/assets/js/pagamento.js"></script>
+</body>
+</html>

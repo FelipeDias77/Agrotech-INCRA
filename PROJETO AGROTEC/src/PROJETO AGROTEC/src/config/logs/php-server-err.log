@@ -1,0 +1,142 @@
+[Tue Nov  4 23:22:43 2025] PHP 8.2.12 Development Server (http://127.0.0.1:8000) started
+[Tue Nov  4 23:22:44 2025] 127.0.0.1:53650 Accepted
+[Tue Nov  4 23:22:44 2025] 127.0.0.1:53650 Closed without sending a request; it was probably just an unused speculative preconnection
+[Tue Nov  4 23:22:44 2025] 127.0.0.1:53650 Closing
+[Tue Nov  4 23:22:49 2025] 127.0.0.1:53652 Accepted
+[Tue Nov  4 23:22:49 2025] 127.0.0.1:53652 [200]: GET /carrot.php
+[Tue Nov  4 23:22:49 2025] 127.0.0.1:53652 Closing
+[Tue Nov  4 23:23:18 2025] 127.0.0.1:61726 Accepted
+[Tue Nov  4 23:23:18 2025] 127.0.0.1:61726 [200]: GET /carrot.php
+[Tue Nov  4 23:23:18 2025] 127.0.0.1:61726 Closing
+[Tue Nov  4 23:23:19 2025] 127.0.0.1:53079 Accepted
+[Tue Nov  4 23:23:19 2025] 127.0.0.1:53079 [200]: GET /carrot.css
+[Tue Nov  4 23:23:19 2025] 127.0.0.1:53079 Closing
+[Tue Nov  4 23:23:19 2025] 127.0.0.1:62140 Accepted
+[Tue Nov  4 23:23:19 2025] 127.0.0.1:50912 Accepted
+[Tue Nov  4 23:23:19 2025] 127.0.0.1:52330 Accepted
+[Tue Nov  4 23:23:19 2025] 127.0.0.1:62140 [200]: GET /assets/incra_logo_version_branca-removebg-preview%203.png
+[Tue Nov  4 23:23:19 2025] 127.0.0.1:50912 [200]: GET /assets/Perfil.png
+[Tue Nov  4 23:23:19 2025] 127.0.0.1:52330 [200]: GET /assets/CENOURA.png
+[Tue Nov  4 23:23:19 2025] 127.0.0.1:62140 Closing
+[Tue Nov  4 23:23:19 2025] 127.0.0.1:50912 Closing
+[Tue Nov  4 23:23:19 2025] 127.0.0.1:52330 Closing
+[Tue Nov  4 23:23:19 2025] 127.0.0.1:55506 Accepted
+[Tue Nov  4 23:23:19 2025] 127.0.0.1:61493 Accepted
+[Tue Nov  4 23:23:19 2025] 127.0.0.1:55506 [200]: GET /assets/image1.png
+[Tue Nov  4 23:23:19 2025] 127.0.0.1:55506 Closing
+[Tue Nov  4 23:23:20 2025] 127.0.0.1:61493 Closed without sending a request; it was probably just an unused speculative preconnection
+[Tue Nov  4 23:23:20 2025] 127.0.0.1:61493 Closing
+[Tue Nov  4 23:23:41 2025] 127.0.0.1:52491 Accepted
+[Tue Nov  4 23:23:41 2025] 127.0.0.1:52491 [200]: POST /buy.php
+[Tue Nov  4 23:23:41 2025] 127.0.0.1:52491 Closing
+[Tue Nov  4 23:23:41 2025] 127.0.0.1:64513 Accepted
+[Tue Nov  4 23:23:44 2025] 127.0.0.1:64513 [200]: POST /add_to_cart.php
+[Tue Nov  4 23:23:44 2025] 127.0.0.1:64513 Closing
+[Tue Nov  4 23:24:47 2025] 127.0.0.1:49907 Accepted
+[Tue Nov  4 23:24:47 2025] 127.0.0.1:49907 [200]: POST /add_to_cart.php
+[Tue Nov  4 23:24:47 2025] 127.0.0.1:49907 Closing
+[Tue Nov  4 23:24:47 2025] 127.0.0.1:49908 Accepted
+[Tue Nov  4 23:24:47 2025] 127.0.0.1:49908 [200]: POST /buy.php
+[Tue Nov  4 23:24:47 2025] 127.0.0.1:49908 Closing
+[Tue Nov  4 23:26:00 2025] 127.0.0.1:49937 Accepted
+[Tue Nov  4 23:26:00 2025] 127.0.0.1:49937 [200]: POST /add_to_cart.php
+[Tue Nov  4 23:26:00 2025] 127.0.0.1:49937 Closing
+[Tue Nov  4 23:26:00 2025] 127.0.0.1:49938 Accepted
+[Tue Nov  4 23:26:00 2025] 127.0.0.1:49938 [200]: POST /buy.php
+[Tue Nov  4 23:26:00 2025] 127.0.0.1:49938 Closing
+[Tue Nov  4 23:26:27 2025] 127.0.0.1:49956 Accepted
+[Tue Nov  4 23:26:27 2025] 127.0.0.1:49956 [200]: POST /add_to_cart.php
+[Tue Nov  4 23:26:27 2025] 127.0.0.1:49956 Closing
+[Tue Nov  4 23:26:27 2025] 127.0.0.1:49957 Accepted
+[Tue Nov  4 23:26:27 2025] 127.0.0.1:49957 [200]: POST /buy.php
+[Tue Nov  4 23:26:27 2025] 127.0.0.1:49957 Closing
+[Tue Nov  4 23:27:29 2025] 127.0.0.1:49999 Accepted
+[Tue Nov  4 23:27:29 2025] 127.0.0.1:49999 [200]: POST /buy.php
+[Tue Nov  4 23:27:29 2025] 127.0.0.1:49999 Closing
+[Tue Nov  4 23:27:56 2025] 127.0.0.1:59450 Accepted
+[Tue Nov  4 23:27:56 2025] 127.0.0.1:59450 [200]: GET /carrot.php
+[Tue Nov  4 23:27:56 2025] 127.0.0.1:59450 Closing
+[Tue Nov  4 23:27:56 2025] 127.0.0.1:52417 Accepted
+[Tue Nov  4 23:27:56 2025] 127.0.0.1:52417 [200]: GET /carrot.css
+[Tue Nov  4 23:27:56 2025] 127.0.0.1:52417 Closing
+[Tue Nov  4 23:27:56 2025] 127.0.0.1:50337 Accepted
+[Tue Nov  4 23:27:56 2025] 127.0.0.1:50768 Accepted
+[Tue Nov  4 23:27:56 2025] 127.0.0.1:50749 Accepted
+[Tue Nov  4 23:27:56 2025] 127.0.0.1:50337 [200]: GET /assets/incra_logo_version_branca-removebg-preview%203.png
+[Tue Nov  4 23:27:56 2025] 127.0.0.1:50768 [200]: GET /assets/Perfil.png
+[Tue Nov  4 23:27:56 2025] 127.0.0.1:50749 [200]: GET /assets/CENOURA.png
+[Tue Nov  4 23:27:56 2025] 127.0.0.1:50337 Closing
+[Tue Nov  4 23:27:56 2025] 127.0.0.1:50768 Closing
+[Tue Nov  4 23:27:56 2025] 127.0.0.1:50749 Closing
+[Tue Nov  4 23:27:57 2025] 127.0.0.1:65328 Accepted
+[Tue Nov  4 23:27:57 2025] 127.0.0.1:53939 Accepted
+[Tue Nov  4 23:27:57 2025] 127.0.0.1:65328 [200]: GET /assets/image1.png
+[Tue Nov  4 23:27:57 2025] 127.0.0.1:65328 Closing
+[Tue Nov  4 23:27:58 2025] 127.0.0.1:53939 [200]: POST /buy.php
+[Tue Nov  4 23:27:58 2025] 127.0.0.1:53939 Closing
+[Tue Nov  4 23:28:02 2025] 127.0.0.1:60772 Accepted
+[Tue Nov  4 23:28:02 2025] 127.0.0.1:60772 [200]: POST /buy.php
+[Tue Nov  4 23:28:02 2025] 127.0.0.1:60772 Closing
+[Tue Nov  4 23:28:02 2025] 127.0.0.1:59892 Accepted
+[Tue Nov  4 23:28:10 2025] 127.0.0.1:59892 Closed without sending a request; it was probably just an unused speculative preconnection
+[Tue Nov  4 23:28:10 2025] 127.0.0.1:59892 Closing
+[Tue Nov  4 23:30:11 2025] 127.0.0.1:55266 Accepted
+[Tue Nov  4 23:30:11 2025] 127.0.0.1:55266 [200]: GET /assets/CENOURA.png
+[Tue Nov  4 23:30:11 2025] 127.0.0.1:55266 Closing
+[Tue Nov  4 23:30:11 2025] 127.0.0.1:53548 Accepted
+[Tue Nov  4 23:30:11 2025] 127.0.0.1:53548 Closed without sending a request; it was probably just an unused speculative preconnection
+[Tue Nov  4 23:30:11 2025] 127.0.0.1:53548 Closing
+[Tue Nov  4 23:30:14 2025] 127.0.0.1:50240 Accepted
+[Tue Nov  4 23:30:14 2025] 127.0.0.1:50240 [200]: POST /buy.php
+[Tue Nov  4 23:30:14 2025] 127.0.0.1:50240 Closing
+[Tue Nov  4 23:30:15 2025] 127.0.0.1:64783 Accepted
+[Tue Nov  4 23:30:16 2025] 127.0.0.1:64783 [200]: POST /add_to_cart.php
+[Tue Nov  4 23:30:16 2025] 127.0.0.1:64783 Closing
+[Tue Nov  4 23:32:30 2025] 127.0.0.1:50791 Accepted
+[Tue Nov  4 23:32:30 2025] 127.0.0.1:50791 [200]: GET /carrot.php
+[Tue Nov  4 23:32:30 2025] 127.0.0.1:50791 Closing
+[Tue Nov  4 23:32:30 2025] 127.0.0.1:57428 Accepted
+[Tue Nov  4 23:32:30 2025] 127.0.0.1:57428 [200]: GET /carrot.css
+[Tue Nov  4 23:32:30 2025] 127.0.0.1:52310 Accepted
+[Tue Nov  4 23:32:30 2025] 127.0.0.1:57428 Closing
+[Tue Nov  4 23:32:30 2025] 127.0.0.1:52453 Accepted
+[Tue Nov  4 23:32:30 2025] 127.0.0.1:52310 [200]: GET /assets/incra_logo_version_branca-removebg-preview%203.png
+[Tue Nov  4 23:32:30 2025] 127.0.0.1:55647 Accepted
+[Tue Nov  4 23:32:30 2025] 127.0.0.1:52453 [200]: GET /assets/Perfil.png
+[Tue Nov  4 23:32:30 2025] 127.0.0.1:54119 Accepted
+[Tue Nov  4 23:32:30 2025] 127.0.0.1:55647 [200]: GET /assets/CENOURA.png
+[Tue Nov  4 23:32:30 2025] 127.0.0.1:59354 Accepted
+[Tue Nov  4 23:32:30 2025] 127.0.0.1:54119 [200]: GET /assets/image1.png
+[Tue Nov  4 23:32:30 2025] 127.0.0.1:52310 Closing
+[Tue Nov  4 23:32:30 2025] 127.0.0.1:52453 Closing
+[Tue Nov  4 23:32:30 2025] 127.0.0.1:54119 Closing
+[Tue Nov  4 23:32:30 2025] 127.0.0.1:55647 Closing
+[Tue Nov  4 23:32:31 2025] 127.0.0.1:59354 Closed without sending a request; it was probably just an unused speculative preconnection
+[Tue Nov  4 23:32:31 2025] 127.0.0.1:59354 Closing
+[Tue Nov  4 23:32:55 2025] 127.0.0.1:62311 Accepted
+[Tue Nov  4 23:32:55 2025] 127.0.0.1:62311 [200]: GET /carrot.php
+[Tue Nov  4 23:32:55 2025] 127.0.0.1:62311 Closing
+[Tue Nov  4 23:32:55 2025] 127.0.0.1:61338 Accepted
+[Tue Nov  4 23:32:55 2025] 127.0.0.1:61338 [200]: GET /carrot.css
+[Tue Nov  4 23:32:55 2025] 127.0.0.1:61338 Closing
+[Tue Nov  4 23:32:55 2025] 127.0.0.1:53355 Accepted
+[Tue Nov  4 23:32:55 2025] 127.0.0.1:62937 Accepted
+[Tue Nov  4 23:32:55 2025] 127.0.0.1:53355 [200]: GET /assets/incra_logo_version_branca-removebg-preview%203.png
+[Tue Nov  4 23:32:55 2025] 127.0.0.1:62937 [200]: GET /assets/Perfil.png
+[Tue Nov  4 23:32:55 2025] 127.0.0.1:53355 Closing
+[Tue Nov  4 23:32:55 2025] 127.0.0.1:62937 Closing
+[Tue Nov  4 23:32:55 2025] 127.0.0.1:60880 Accepted
+[Tue Nov  4 23:32:55 2025] 127.0.0.1:60880 [200]: GET /assets/CENOURA.png
+[Tue Nov  4 23:32:55 2025] 127.0.0.1:57058 Accepted
+[Tue Nov  4 23:32:55 2025] 127.0.0.1:57058 [200]: GET /assets/image1.png
+[Tue Nov  4 23:32:55 2025] 127.0.0.1:57058 Closing
+[Tue Nov  4 23:32:55 2025] 127.0.0.1:60880 Closing
+[Tue Nov  4 23:32:55 2025] 127.0.0.1:50487 Accepted
+[Tue Nov  4 23:32:55 2025] 127.0.0.1:50487 [404]: GET /favicon.ico - No such file or directory
+[Tue Nov  4 23:32:55 2025] 127.0.0.1:50487 Closing
+[Tue Nov  4 23:32:55 2025] 127.0.0.1:56502 Accepted
+[Tue Nov  4 23:32:55 2025] 127.0.0.1:56502 [200]: GET /assets/CENOURA.png
+[Tue Nov  4 23:32:55 2025] 127.0.0.1:56502 Closing
+[Tue Nov  4 23:32:59 2025] 127.0.0.1:53450 Accepted
+[Tue Nov  4 23:32:59 2025] 127.0.0.1:53450 [200]: POST /add_to_cart.php
+[Tue Nov  4 23:32:59 2025] 127.0.0.1:53450 Closing
